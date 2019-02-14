@@ -68,3 +68,7 @@ canvas {
   color: white;
   font-size: 40px;
 }
+.center p {
+  text-align: center;
+  font-size: 15px;
+}
