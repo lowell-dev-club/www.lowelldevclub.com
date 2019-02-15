@@ -13,7 +13,6 @@ p{
 canvas {
   display: block;
   vertical-align: bottom;
-
 }
 
 /* ---- particles.js container ---- */
@@ -61,7 +60,6 @@ body{
 	P{
 		font-size:50px;
 		margin-left:30%;
-
 	}
 
 	#tag{
@@ -76,7 +74,6 @@ body{
 		font-size:100px;
 		margin-left:38%;
 		margin-top:12%;
-
 	}
 
 	#tag{
