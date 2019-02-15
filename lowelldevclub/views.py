@@ -16,3 +16,7 @@ def schedule():
 @app.route('/meetings', methods=['GET'])
 def meetings():
     return render_template('meetings.html')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
