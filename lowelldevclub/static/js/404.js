@@ -1,12 +1,12 @@
-$(document).ready(function() {
-  var canvas = document.getElementById("particles-js");
-  canvas.width = $("#parent").width();
-  canvas.height = $("#parent").height();
+// $(document).ready(function() {
+//   var canvas = document.getElementById("particles-js");
+//   canvas.width = $("#parent").width();
+//   canvas.height = $("#parent").height();
 
-	var wind =new buzz.sound("http://k003.kiwi6.com/hotlink/bcj5gqrt0n/Wind-Mark_DiAngelo-1940285615.mp3");
-	wind.loop();
-	wind.play();
-});
+// 	var wind =new buzz.sound("http://k003.kiwi6.com/hotlink/bcj5gqrt0n/Wind-Mark_DiAngelo-1940285615.mp3");
+// 	wind.loop();
+// 	wind.play();
+// });
 
 
 /* ---- particles.js config ---- */
@@ -117,5 +117,4 @@ particlesJS("particles-js", {
     }
   },
   "retina_detect": true
-}
-					 );
+});
