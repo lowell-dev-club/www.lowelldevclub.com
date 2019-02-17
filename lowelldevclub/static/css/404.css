@@ -2,12 +2,14 @@
 	padding:2px;
 }
 
-p{
+p {
 	font-size:200px;
 	margin-left:36%;
 	margin-top:15%;
 	font-family: 'Muli', sans-serif;
-	color:white
+	color:white;
+	position: absolute;
+	z-index: 1 !important;
 }
 
 canvas {
@@ -18,7 +20,7 @@ canvas {
 /* ---- particles.js container ---- */
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   width: 99%;
   height: 99%;
   background-color: rgba(255, 255, 255, 0);
@@ -27,6 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c0170', end
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  z-index: -1 !important;
 }
 
 body{
@@ -42,7 +45,7 @@ body{
 }
 
 @media only screen and (max-width: 530px)  {
-	P{
+	p {
 		font-size:30px;
 		margin-left:35%;
 	}
@@ -55,7 +58,7 @@ body{
 }
 
 @media only screen and (min-width: 531px) and (max-width: 580px)  {
-	P{
+	p {
 		font-size:50px;
 		margin-left:30%;
 	}
@@ -68,7 +71,7 @@ body{
 }
 
 @media only screen and (min-width: 581px) and (max-width: 850px)  {
-	P{
+	p {
 		font-size:100px;
 		margin-left:38%;
 		margin-top:12%;
