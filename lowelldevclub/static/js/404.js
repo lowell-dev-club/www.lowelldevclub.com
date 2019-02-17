@@ -1,11 +1,3 @@
-wind = new Audio('http://k003.kiwi6.com/hotlink/bcj5gqrt0n/Wind-Mark_DiAngelo-1940285615.mp3'); 
-wind.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-wind.play();
-
-
 /* ---- particles.js config ---- */
 
 particlesJS("particles-js", {
@@ -29,6 +21,11 @@ particlesJS("particles-js", {
       "polygon": {
         "nb_sides": 0
       },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
     },
     "opacity": {
       "value": 0.9,
