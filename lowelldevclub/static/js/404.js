@@ -29,7 +29,6 @@ particlesJS("particles-js", {
       "polygon": {
         "nb_sides": 0
       },
-
     },
     "opacity": {
       "value": 0.9,
@@ -83,7 +82,6 @@ particlesJS("particles-js", {
       "onclick": {
         "enable": true,
         "mode": "bubble",
-
       },
       "resize": true
     },
