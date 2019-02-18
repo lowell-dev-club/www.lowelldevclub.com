@@ -134,12 +134,12 @@ canvas {
   /* Safari 4.0 - 8.0 */
   -webkit-animation-name: float-up;
   -webkit-animation-duration: 5s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 1s;
   -webkit-animation-fill-mode: both;
   /* Standard syntax */
   animation-name: float-up;
   animation-duration: 5s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 
@@ -148,12 +148,12 @@ canvas {
   /* Safari 4.0 - 8.0 */
   -webkit-animation-name: float-up;
   -webkit-animation-duration: 5s;
-  -webkit-animation-delay: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: both;
   /* Standard syntax */
   animation-name: float-up;
   animation-duration: 5s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 
