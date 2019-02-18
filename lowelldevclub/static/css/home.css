@@ -132,24 +132,24 @@ canvas {
 .float-up {
   position: relative;
   /* Safari 4.0 - 8.0 */
-  -webkit-animation-name: example;
+  -webkit-animation-name: float-up;
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: both;
   /* Standard syntax */
-  animation-name: example;
+  animation-name: float-up;
   animation-duration: 5s;
   animation-delay: 2s;
   animation-fill-mode: both;
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
+@-webkit-keyframes float-up {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
 
-@keyframes example {
+@keyframes float-up {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
