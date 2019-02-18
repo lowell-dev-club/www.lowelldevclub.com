@@ -73,6 +73,7 @@ canvas {
   font-size: 15px;
 }
 
+/* ---- css to fade in the home page ---- */
 .fade-in {
   animation: fadeIn ease 5s;
   -webkit-animation: fadeIn ease 5s;
@@ -125,4 +126,30 @@ canvas {
   100% {
     opacity:1;
   }
+}
+
+/* ---- css to float the title ----*/
+.float-up {
+  position: relative;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+  /* Standard syntax */
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0% {top: 0px; opacity: 0;}
+  100% {top: -50px; opacity: 1;}
+}
+
+@keyframes example {
+  0% {top: 0px; opacity: 0;}
+  100% {top: -50px; opacity: 1;}
 }
