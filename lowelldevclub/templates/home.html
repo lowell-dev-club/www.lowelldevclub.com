@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Lowell Dev Club</title>
+{% extends 'base.html' %}
+{% block head_css %}
 	<link rel="stylesheet" type="text/css" href="static/css/home.css">
+{% endblock %}
+{% block head_js %}
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-</head>
+{% endblock %}
 <body>
+{% block content %}
+
 	<!-- Wrapper for all html elements for fade in effect -->
 	<div class="fade-in">
 
 	<div id="particles-js"></div>
-	<nav class="navbar">
-		<a href="/" class="navbar-text">Home</a>
-		<div class="navbar-right">
-			<a href="/about" class="navbar-text" id="">About</a>
-		  <a href="/schedule" class="navbar-text" id="">Schedule</a>
-		  <a href="/meetings" class="navbar-text" id="">Meetings</a>
+		<nav class="navbar">
+			<a href="/" class="navbar-text">Home</a>
+			<div class="navbar-right">
+				<a href="/about" class="navbar-text" id="">About</a>
+		  	<a href="/schedule" class="navbar-text" id="">Schedule</a>
+		  	<a href="/meetings" class="navbar-text" id="">Meetings</a>
+			</div>
+	  		<div style="clear:both"></div>
+		</nav>
+
+		<div class="center">
+			<h1 class="float-up">Lowell Dev Club</h1>
+			<p class="float-up-subtitle">Well, hello there</p>
 		</div>
-	  	<div style="clear:both"></div>
-	</nav>
-	<div class="center">
-		<h1 class="float-up">Lowell Dev Club</h1>
-		<p class="float-up-subtitle">Well, hello there</p>
 	</div>
 
-	</div>
-
+{% endblock %}
+{% block trailing_js %}
 	<script type="text/javascript" src="static/js/home.js"></script>
-</body>
-</html>
+{% endblock %}
