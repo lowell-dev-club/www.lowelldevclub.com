@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>About</title>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-	<!--<script type="text/javascript" src="static/js/about.js"></script>-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="static/css/about.css">
-</head>
-<body>
+{% extends 'base.html' %}
+{% block head_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/about.css">
+{% endblock %}
+{% block head_js %}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<!--<script type="text/javascript" src="static/js/about.js"></script>-->
+{% endblock %}
+{% block content %}
 	<div class="card">
   	<img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano" style="height:200">
   	<h1>Rafael Cenzano</h1>
@@ -47,6 +47,4 @@
   	</div>
   	<p><button>Contact</button></p>
 	</div>
-
-</body>
-</html>
+{% endblock %}
