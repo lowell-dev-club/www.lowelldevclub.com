@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block head_css %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="static/css/about.css">
@@ -7,44 +8,55 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <!--<script type="text/javascript" src="static/js/about.js"></script>-->
 {% endblock %}
+
 {% block content %}
-	<div class="card">
-  	<img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano" style="height:200">
-  	<h1>Rafael Cenzano</h1>
-  	<p class="title">Co-President</p>
-  	<p>Python, Bash, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
-  	<div style="margin: 24px 0;">
-    	<a href="https://github.com/RafaelCenzano" target="_blank"><i class="fa fa-github"></i></a>
-    	<a href="https://www.linkedin.com/in/rafael-cenzano/" target="_blank"><i class="fa fa-linkedin"></i></a>
-    	<a href="https://www.facebook.com/profile.php?id=100008046498255" target="_blank"><i class="fa fa-facebook"></i></a>
-    	<a href="https://www.instagram.com/raf.py/" target="_blank"><i class="fa fa-instagram"></i></a>
-  	</div>
-  	<p><button>Contact</button></p>
-	</div>
-	<div class="card">
-  	<img src="" alt="Cappillen Lee" style="width:100%">
-  	<h1>Cappillen Lee</h1>
-  	<p class="title">Co-President</p>
-  	<p>Harvard University</p>
-  	<div style="margin: 24px 0;">
-    	<a href="#" target="_blank"><i class="fa fa-github"></i></a>
-			<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-    	<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-    	<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-  	</div>
-  	<p><button>Contact</button></p>
-	</div>
-	<div class="card">
-  	<img src="" alt="Luna, Isabel" style="width:100%">
-  	<h1>Luna, Isabel</h1>
-  	<p class="title">Vice President</p>
-  	<p>Harvard University</p>
-  	<div style="margin: 24px 0;">
-    	<a href="#" target="_blank"><i class="fa fa-github"></i></a>
-			<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-    	<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-    	<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-  	</div>
-  	<p><button>Contact</button></p>
+	<div class="container">
+  	<div class="row">
+			<div class="col">
+				<div class="card">
+  				<img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano" style="height:200">
+  				<h1>Rafael Cenzano</h1>
+  				<p class="title">Co-President</p>
+  				<p>Python, Bash Scripting, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+  				<div style="margin: 24px 0;">
+    				<a href="https://github.com/RafaelCenzano" target="_blank"><i class="fa fa-github"></i></a>
+    				<a href="https://www.linkedin.com/in/rafael-cenzano/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    				<a href="https://www.facebook.com/profile.php?id=100008046498255" target="_blank"><i class="fa fa-facebook"></i></a>
+    				<a href="https://www.instagram.com/raf.py/" target="_blank"><i class="fa fa-instagram"></i></a>
+  				</div>
+  				<a href="mailto:savagecoder77@gmail.com"><p><button>Contact</button></p></a>
+				</div>
+		  </div>
+			<div class="col">
+				<div class="card">
+  				<img src="" alt="Cappillen Lee" style="width:100%">
+  				<h1>Cappillen Lee</h1>
+  				<p class="title">Co-President</p>
+  				<p>Python, Java, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+  				<div style="margin: 24px 0;">
+    				<a href="#" target="_blank"><i class="fa fa-github"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+    				<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    				<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+  				</div>
+  				<p><button>Contact</button></p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+  				<img src="" alt="Luna, Isabel" style="width:100%">
+  				<h1>Luna, Isabel</h1>
+  				<p class="title">Vice President</p>
+  				<p>Python, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+  				<div style="margin: 24px 0;">
+    				<a href="#" target="_blank"><i class="fa fa-github"></i></a>
+						<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+    				<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    				<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+  				</div>
+  				<p><button>Contact</button></p>
+				</div>
+			</div>
+		</div>
 	</div>
 {% endblock %}
