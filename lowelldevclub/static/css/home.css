@@ -167,3 +167,8 @@ canvas {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
+
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
