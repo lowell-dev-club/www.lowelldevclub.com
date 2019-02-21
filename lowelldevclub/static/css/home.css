@@ -168,7 +168,16 @@ canvas {
   100% {top: -50px; opacity: 1;}
 }
 
-.bottom {
+/* ---- css for the footer ---- */
+.footer {
   position: absolute;
   bottom: 0px;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer-right {
+  float: right;
 }
