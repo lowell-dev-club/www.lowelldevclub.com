@@ -178,6 +178,16 @@ canvas {
   z-index: 1;
 }
 
+.footer a {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-text {
+  color: #FFF !important;
+}
 .footer-right {
   float: right;
 }
