@@ -1,5 +1,7 @@
 import Typed from 'typed.js';
 
+//https://mattboldt.com/ creator of typed.js
+
 $(function(){
 	$(".typed").typed({
 		strings: ["Developers.", "Designers.", "Lowell Students.", "Computer Scientists"],
