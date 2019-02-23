@@ -1,18 +1,37 @@
-var typed = new Typed("#typed", {
-  stringsElement: '#typed-strings',
-  typeSpeed: 0,
-  backSpeed: 0,
-  backDelay: 500,
-  startDelay: 1000,
-  loop: false,
-  onComplete: function(self) { prettyLog('onCmplete ' + self) },
-  preStringTyped: function(pos, self) { prettyLog('preStringTyped ' + pos + ' ' + self); },
-  onStringTyped: function(pos, self) { prettyLog('onStringTyped ' + pos + ' ' + self) },
-  onLastStringBackspaced: function(self) { prettyLog('onLastStringBackspaced ' + self) },
-  onTypingPaused: function(pos, self) { prettyLog('onTypingPaused ' + pos + ' ' + self) },
-  onTypingResumed: function(pos, self) { prettyLog('onTypingResumed ' + pos + ' ' + self) },
-  onReset: function(self) { prettyLog('onReset ' + self) },
-  onStop: function(pos, self) { prettyLog('onStop ' + pos + ' ' + self) },
-  onStart: function(pos, self) { prettyLog('onStart ' + pos + ' ' + self) },
-  onDestroy: function(self) { prettyLog('onDestroy ' + self) }
+import Typed from 'typed.js';
+
+$(function(){
+	$(".typed").typed({
+		strings: ["Developers.", "Designers.", "Lowell Students.", "Computer Scientists"],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
 });
