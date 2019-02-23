@@ -167,3 +167,27 @@ canvas {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
+
+/* ---- css for the footer ---- */
+.footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer a {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-text {
+  color: #FFF !important;
+}
+.footer-right {
+  float: right;
+}
