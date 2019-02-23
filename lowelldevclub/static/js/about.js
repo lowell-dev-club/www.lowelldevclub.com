@@ -1,4 +1,4 @@
-import Typed from 'typed.js';
+import Typed from 'https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js'
 
 //https://mattboldt.com/ creator of typed.js
 
