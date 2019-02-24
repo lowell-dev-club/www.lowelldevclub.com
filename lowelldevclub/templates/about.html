@@ -5,17 +5,18 @@
 <link rel="stylesheet" href="static/css/lib/bootstrap.min.css">
 <link rel="stylesheet" href="static/css/about.css">
 {% endblock %}
+
 {% block head_js %}
-<!--<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>-->
-<script type="text/javascript" src="static/js/about.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
 {% endblock %}
 
 {% block content %}
-	<div class="banner">
-		<div class="typed_wrap">
-			<h1>We Are <span class="typed"></span></h1>
-		</div>
+	<div id="typed-strings">
+	 	<p>Typed.js is a <strong>JavaScript</strong> library.</p>
+	 	<p>It can type anything you want</p>
 	</div>
+	<span id="typed"></span>
 	<div class="container">
   	<div class="row">
 			<div class="col">
@@ -66,4 +67,8 @@
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block trailing_js %}
+<script type="text/javascript" src="static/js/about.js"></script>
 {% endblock %}
