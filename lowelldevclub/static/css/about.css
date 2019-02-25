@@ -11,6 +11,28 @@
   font-size: 18px;
 }
 
+/* ---- navbar ---- */
+
+.navbar {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-text {
+  color: #FFF !important;
+}
+.navbar-right {
+  float:right;
+}
+.navbar a {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
 /* ---- particles.js container ---- */
 
 #particles-js {
