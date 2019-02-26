@@ -1,3 +1,28 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing:border-box;
+}
+html, body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web';font-size: 17px;
+}
+*,*:before,*:after {
+  box-sizing:inherit
+}
+
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -12,10 +37,11 @@
 }
 
 /* ---- navbar ---- */
-
-.navbar {
+#navbar-dev-club {
   padding: 15px;
-  position: absolute;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -26,7 +52,9 @@
 .navbar-right {
   float:right;
 }
-.navbar a {
+#navbar-dev-club a {
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-right: 10px;
   margin-left: 10px;
   text-decoration: none;
@@ -59,12 +87,13 @@ button {
   font-size: 18px;
 }
 
-a {
+/*a {
+  margin: none;
   text-decoration: none;
   font-size: 22px;
   color: black;
 }
-
+*/
 button:hover, a:hover {
   opacity: 0.7;
 }
