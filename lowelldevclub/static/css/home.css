@@ -15,7 +15,7 @@ html, body
 
 body {
   margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font:normal 85% Arial, Helvetica, sans-serif;
 }
 
 canvas {
@@ -51,8 +51,10 @@ canvas {
   float:right;
 }
 .navbar a {
+  font-weight: bold;
   margin-right: 10px;
   margin-left: 10px;
+  font: 10px;
   text-decoration: none;
   color: #000;
 }

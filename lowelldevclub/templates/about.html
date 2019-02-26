@@ -7,66 +7,85 @@
 {% endblock %}
 
 {% block head_js %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script type="text/javascript" src="static/js/about.js"></script>
 {% endblock %}
 
 {% block content %}
-	<div id="typed-strings">
-	 	<p>Typed.js is a <strong>JavaScript</strong> library.</p>
-	 	<p>It can type anything you want</p>
-	</div>
-	<span id="typed"></span>
-	<div class="container">
-  	<div class="row">
-			<div class="col">
-				<div class="jumbotron card">
-  				<center><img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano"></center>
-					<br>
-  				<h1>Rafael Cenzano</h1>
-  				<p class="title">Co-President</p>
-  				<p>Python, Bash Scripting, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
-  				<div style="margin: 24px 0;">
-    				<a href="https://github.com/RafaelCenzano" target="_blank"><i class="fa fa-github"></i></a>
-    				<a href="https://www.linkedin.com/in/rafael-cenzano/" target="_blank"><i class="fa fa-linkedin"></i></a>
-    				<a href="https://www.facebook.com/profile.php?id=100008046498255" target="_blank"><i class="fa fa-facebook"></i></a>
-    				<a href="https://www.instagram.com/raf.py/" target="_blank"><i class="fa fa-instagram"></i></a>
-  				</div>
-  				<a href="mailto:savagecoder77@gmail.com"><p><button>Contact</button></p></a>
-				</div>
-		  </div>
-			<div class="col">
-				<div class="jumbotron card">
-  				<img src="" alt="Cappillen Lee" style="width:100%">
-  				<h1>Cappillen Lee</h1>
-  				<p class="title">Co-President</p>
-  				<p>Python, Java, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
-  				<div style="margin: 24px 0;">
-    				<a href="#" target="_blank"><i class="fa fa-github"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-    				<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-    				<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-  				</div>
-  				<p><button>Contact</button></p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="jumbotron card">
-  				<img src="" alt="Luna, Isabel" style="width:100%">
-  				<h1>Isabel Luna (Luna)</h1>
-  				<p class="title">Vice President</p>
-  				<p>Python, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
-  				<div style="margin: 24px 0;">
-    				<a href="#" target="_blank"><i class="fa fa-github"></i></a>
-						<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-    				<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-    				<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-  				</div>
-  				<p><button>Contact</button></p>
-				</div>
-			</div>
-		</div>
-	</div>
+  
+  <div class="body-particles">
+    <nav id="navbar-dev-club">
+      <a href="/" class="navbar-text">Home</a>
+      <div class="navbar-right">
+        <a href="/about" class="navbar-text" id="">About</a>
+        <a href="/schedule" class="navbar-text" id="">Schedule</a>
+        <a href="/meetings" class="navbar-text" id="">Meetings</a>
+      </div>
+      <div style="clear:both"></div>
+    </nav>
+    <div id="typed-strings">
+      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+      <p>It can type anything you want</p>
+    </div>
+    <span id="typed"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron card">
+            <center><img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano"></center>
+            <br>
+            <h1>Rafael Cenzano</h1>
+            <p class="title">Co-President</p>
+            <p>Python, Bash Scripting, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+            <div style="margin: 24px 0;">
+              <a href="https://github.com/RafaelCenzano" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/rafael-cenzano/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100008046498255" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/raf.py/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <a href="mailto:savagecoder77@gmail.com"><p><button>Contact</button></p></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="jumbotron card">
+            <img src="" alt="Cappillen Lee" style="width:100%">
+            <h1>Cappillen Lee</h1>
+            <p class="title">Co-President</p>
+            <p>Python, Java, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+            <div style="margin: 24px 0;">
+              <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="jumbotron card">
+            <img src="" alt="Luna, Isabel" style="width:100%">
+            <h1>Isabel Luna (Luna)</h1>
+            <p class="title">Vice President</p>
+            <p>Python, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
+            <div style="margin: 24px 0;">
+              <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div id="particles-js"></div>
+
+  <script type="text/javascript" src="static/js/about.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
 {% endblock %}
 
 {% block trailing_js %}
