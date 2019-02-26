@@ -13,21 +13,16 @@
 {% endblock %}
 
 {% block content %}
-<div id="particles-js"></div>
-<nav class="navbar">
-  <a href="/" class="navbar-text">Home</a>
-  <div class="navbar-right">
-    <a href="/about" class="navbar-text" id="">About</a>
-      <a href="/schedule" class="navbar-text" id="">Schedule</a>
-      <a href="/meetings" class="navbar-text" id="">Meetings</a>
-  </div>
-    <div style="clear:both"></div>
-</nav>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
-{% endblock %}
-
-{% block content %}
+  <div id="particles-js"></div>
+  <nav class="navbar">
+    <a href="/" class="navbar-text">Home</a>
+    <div class="navbar-right">
+      <a href="/about" class="navbar-text" id="">About</a>
+        <a href="/schedule" class="navbar-text" id="">Schedule</a>
+        <a href="/meetings" class="navbar-text" id="">Meetings</a>
+    </div>
+      <div style="clear:both"></div>
+  </nav>
 	<div id="typed-strings">
 	 	<p>Typed.js is a <strong>JavaScript</strong> library.</p>
 	 	<p>It can type anything you want</p>
@@ -84,6 +79,8 @@
 		</div>
 	</div>
   <script type="text/javascript" src="static/js/about.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
 {% endblock %}
 
 {% block trailing_js %}
