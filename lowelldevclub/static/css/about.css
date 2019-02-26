@@ -53,6 +53,7 @@ canvas {
   float:right;
 }
 #navbar-dev-club a {
+  font-weight: bold;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 10px;
