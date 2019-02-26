@@ -5,9 +5,9 @@ html {
 }
 html, body
 {
-    margin: 0;
-    padding: 0;
-    font-family: 'Titillium Web';font-size: 17px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web';font-size: 17px;
 }
 *,*:before,*:after {
   box-sizing:inherit
@@ -15,7 +15,7 @@ html, body
 
 body {
   margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font:normal 85% Arial, Helvetica, sans-serif;
 }
 
 canvas {
