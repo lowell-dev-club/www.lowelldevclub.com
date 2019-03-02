@@ -9,13 +9,13 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/schedule', methods=['GET'])
-def schedule():
-    return render_template('schedule.html')
+@app.route('/partners', methods=['GET'])
+def partners():
+    return render_template('partners.html')
 
-@app.route('/meetings', methods=['GET'])
-def meetings():
-    return render_template('meetings.html')
+@app.route('/sponsors', methods=['GET'])
+def sponsors():
+    return render_template('sponsors.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
