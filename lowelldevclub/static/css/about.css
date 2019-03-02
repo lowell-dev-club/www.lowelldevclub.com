@@ -109,6 +109,6 @@ button:hover, a:hover {
 
 img {
   margin: auto;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 10rem;
+  max-height: 10rem;
 }
