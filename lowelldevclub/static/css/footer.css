@@ -1,0 +1,68 @@
+/* ---- css for the footer ---- */
+.footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+/*.footer a {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #000;
+}*/
+
+.footer-text {
+  color: #FFF !important;
+}
+.footer-right {
+  float: right;
+}
+
+/* ---- css for social media icons ---- */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  /*margin: 5px 2px;*/
+  /*border-radius: 50%;*/
+}
+.fab {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  /*background: #3B5998;*/
+  color: white;
+}
+
+.fa-instagram {
+  /*background: #125688;*/
+  color: white;
+}
+
+.fa-slack {
+  /*background: #3F0F3F;*/
+  color: white;
+}
+
+.fa-github {
+  /*background: #333333;*/
+  color: white;
+}
+
+.fa-discord {
+  color: white;
+}
