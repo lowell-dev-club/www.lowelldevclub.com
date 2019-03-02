@@ -36,32 +36,6 @@ canvas {
   font-size: 18px;
 }
 
-/* ---- navbar ---- */
-#navbar-dev-club {
-  padding: 15px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.navbar-text {
-  color: #FFF !important;
-}
-.navbar-right {
-  float:right;
-}
-#navbar-dev-club a {
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 10px;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #000;
-}
-
 /* ---- particles.js container ---- */
 
 #particles-js {
