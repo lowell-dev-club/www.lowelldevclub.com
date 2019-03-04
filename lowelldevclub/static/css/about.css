@@ -25,14 +25,18 @@ canvas {
 
 .container {
   margin: auto;
-  background: blue;
+  margin-top: 50px;
+  width: 75%;
+  background: white;
 }
 .row {
+  width: 100%;
   padding: none;
   margin: auto;
 }
 
 .col {
+  width:33%;
   float: left;
 }
 
