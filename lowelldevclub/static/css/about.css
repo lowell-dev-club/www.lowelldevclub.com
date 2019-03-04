@@ -23,6 +23,19 @@ canvas {
   vertical-align: bottom;
 }
 
+.container {
+  margin: auto;
+  background: blue;
+}
+.row {
+  padding: none;
+  margin: auto;
+}
+
+.col {
+  float: left;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -77,6 +90,7 @@ button {
   color: black;
 }
 */
+
 button:hover, a:hover {
   opacity: 0.7;
 }
