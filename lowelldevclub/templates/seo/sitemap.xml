@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>http://lowelldev.club/</loc>
+
+      <lastmod>2019-3-4</lastmod>
+
+      <changefreq>yearly</changefreq>
+
+      <priority>0.9</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://lowelldev.club/about</loc>
+
+      <lastmod>2019-3-4</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.7</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://lowelldev.club/partners</loc>
+
+      <lastmod>2019-3-4</lastmod>
+
+      <changefreq>yearly</changefreq>
+
+      <priority>0.5</priority>
+
+   </url>
+
+   <url>
+
+      <loc>http://lowelldev.club/sponsors</loc>
+
+      <lastmod>2019-3-4</lastmod>
+
+      <priority>0.5</priority>
+
+   </url>
+
+</urlset>
