@@ -5,9 +5,9 @@ html {
 }
 html, body
 {
-    margin: 0;
-    padding: 0;
-    font-family: 'Titillium Web';font-size: 17px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web';font-size: 17px;
 }
 *,*:before,*:after {
   box-sizing:inherit
@@ -34,29 +34,6 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-}
-
-/* ---- navbar ---- */
-.navbar {
-  padding: 15px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.navbar-text {
-  color: #FFF !important;
-}
-.navbar-right {
-  float:right;
-}
-.navbar a {
-  font-weight: bold;
-  margin-right: 10px;
-  margin-left: 10px;
-  font: 10px;
-  text-decoration: none;
-  color: #000;
 }
 
 /* ---- center text ---- */
@@ -168,73 +145,4 @@ canvas {
 @keyframes float-up {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
-}
-
-/* ---- css for the footer ---- */
-.footer {
-  position: absolute;
-  bottom: 0px;
-  padding: 15px;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
-
-/*.footer a {
-  margin-right: 10px;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #000;
-}*/
-
-.footer-text {
-  color: #FFF !important;
-}
-.footer-right {
-  float: right;
-}
-
-/* ---- css for social media icons ---- */
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  /*margin: 5px 2px;*/
-  /*border-radius: 50%;*/
-}
-.fab {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  /*background: #3B5998;*/
-  color: white;
-}
-
-.fa-instagram {
-  /*background: #125688;*/
-  color: white;
-}
-
-.fa-slack {
-  /*background: #3F0F3F;*/
-  color: white;
-}
-
-.fa-github {
-  /*background: #333333;*/
-  color: white;
-}
-
-.fa-discord {
-  color: white;
 }

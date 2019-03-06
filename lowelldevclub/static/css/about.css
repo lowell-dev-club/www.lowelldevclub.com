@@ -23,6 +23,23 @@ canvas {
   vertical-align: bottom;
 }
 
+.container {
+  margin: auto;
+  margin-top: 50px;
+  width: 75%;
+  background: white;
+}
+.row {
+  width: 100%;
+  padding: none;
+  margin: auto;
+}
+
+.col {
+  width:33%;
+  float: left;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -34,32 +51,6 @@ canvas {
 .title {
   color: grey;
   font-size: 18px;
-}
-
-/* ---- navbar ---- */
-#navbar-dev-club {
-  padding: 15px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.navbar-text {
-  color: #FFF !important;
-}
-.navbar-right {
-  float:right;
-}
-#navbar-dev-club a {
-  font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 10px;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #000;
 }
 
 /* ---- particles.js container ---- */
@@ -103,12 +94,13 @@ button {
   color: black;
 }
 */
+
 button:hover, a:hover {
   opacity: 0.7;
 }
 
 img {
   margin: auto;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 10rem;
+  max-height: 10rem;
 }

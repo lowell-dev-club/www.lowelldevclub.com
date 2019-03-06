@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head_css %}
+	<link rel="stylesheet" href="static/css/sponsor.css">
+	<link rel="stylesheet" href="static/css/navbar.css">
+	<link rel="stylesheet" href="static/css/footer.css">
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar">
+	<a href="/" class="navbar-text">Home</a>
+	<div class="navbar-right">
+		<a href="/about" class="navbar-text" id="">About</a>
+			<a href="/partners" class="navbar-text" id="">Partners</a>
+			<a href="/sponsors" class="navbar-text" id="">Sponsors</a>
+	</div>
+		<div style="clear:both"></div>
+</nav>
+
+<div>
+	<h1>Partners</h1>
+	<a href="https://hackclub.com/" target="_blank"><img src="static/img/hackclub.png" alt="Hack Club"></a>
+	<a href="https://hackclub.com/bank/" target="_blank"><img src="static/img/hackclubbank.png" alt="Hack Club Bank"></a>
+</div>
+
+<footer class="footer">
+	<div class="footer-right">
+		<a href="https://www.facebook.com/Lowell-Dev-Club-555840741569907/" class="fab fa-facebook" target="_blank"></a>
+		<a href="https://www.instagram.com/lowelldevclub/" class="fab fa-instagram" target="_blank"></a>
+		<a href="https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY" class="fab fa-slack" target="_blank"></a>
+		<a href="https://discord.gg/VHpZSK3" class="fab fa-discord" target="_blank"></a>
+		<a href="https://github.com/lowell-dev-club" class="fab fa-github" target="_blank"></a>
+	</div>
+</footer>
+
+{% endblock %}

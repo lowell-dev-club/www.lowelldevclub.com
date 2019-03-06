@@ -1,39 +1,35 @@
 {% extends 'base.html' %}
 
 {% block head_css %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="static/css/lib/bootstrap.min.css">
-<link rel="stylesheet" href="static/css/about.css">
+  <link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/footer.css">
+  <link rel="stylesheet" href="static/css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
 
 {% block head_js %}
 <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-<script type="text/javascript" src="static/js/about.js"></script>
 {% endblock %}
 
 {% block content %}
-  
+
   <div class="body-particles">
-    <nav id="navbar-dev-club">
+    <nav class="navbar">
       <a href="/" class="navbar-text">Home</a>
       <div class="navbar-right">
         <a href="/about" class="navbar-text" id="">About</a>
-        <a href="/schedule" class="navbar-text" id="">Schedule</a>
-        <a href="/meetings" class="navbar-text" id="">Meetings</a>
+        <a href="/partners" class="navbar-text" id="">Partners</a>
+        <a href="/sponsors" class="navbar-text" id="">Sponsors</a>
       </div>
       <div style="clear:both"></div>
     </nav>
-    <div id="typed-strings">
-      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-      <p>It can type anything you want</p>
-    </div>
     <span id="typed"></span>
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="jumbotron card">
-            <center><img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano"></center>
+            <img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano">
             <br>
             <h1>Rafael Cenzano</h1>
             <p class="title">Co-President</p>
@@ -42,9 +38,8 @@
               <a href="https://github.com/RafaelCenzano" target="_blank"><i class="fa fa-github"></i></a>
               <a href="https://www.linkedin.com/in/rafael-cenzano/" target="_blank"><i class="fa fa-linkedin"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100008046498255" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/raf.py/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
-            <a href="mailto:savagecoder77@gmail.com"><p><button>Contact</button></p></a>
+            <a href=""><p><button>Contact</button></p></a>
           </div>
         </div>
         <div class="col">
@@ -54,10 +49,9 @@
             <p class="title">Co-President</p>
             <p>Python, Java, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
             <div style="margin: 24px 0;">
-              <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://github.com/calee14" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/cappillen-lee-077b7615a/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/cappillen.lee.3" target="_blank"><i class="fa fa-facebook"></i></a>
             </div>
             <p><button>Contact</button></p>
           </div>
@@ -69,25 +63,35 @@
             <p class="title">Vice President</p>
             <p>Python, Javascript, Hyper Text Markup Language, Cascading Style Sheets</p>
             <div style="margin: 24px 0;">
-              <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://github.com/LunaIsabel" target="_blank"><i class="fa fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/isabel-luna-17aa23171/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100028468418782" target="_blank"><i class="fa fa-facebook"></i></a>
             </div>
             <p><button>Contact</button></p>
           </div>
         </div>
+        <div style="clear:both;"></div>
       </div>
     </div>
   </div>
 
+  <footer class="footer">
+		<div class="footer-right">
+			<a href="https://www.facebook.com/Lowell-Dev-Club-555840741569907/" class="fab fa-facebook" target="_blank"></a>
+			<a href="https://www.instagram.com/lowelldevclub/" class="fab fa-instagram" target="_blank"></a>
+			<a href="https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY" class="fab fa-slack" target="_blank"></a>
+			<a href="https://discord.gg/VHpZSK3" class="fab fa-discord" target="_blank"></a>
+			<a href="https://github.com/lowell-dev-club" class="fab fa-github" target="_blank"></a>
+		</div>
+	</footer>
+
 	<div id="particles-js"></div>
 
-  <script type="text/javascript" src="static/js/about.js"></script>
+  <!-- <script type="text/javascript" src="static/js/about.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script> -->
 {% endblock %}
 
 {% block trailing_js %}
-<script type="text/javascript" src="static/js/about.js"></script>
+<script type="text/javascript" src="static/js/home.js"></script>
 {% endblock %}
