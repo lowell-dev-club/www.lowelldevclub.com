@@ -43,8 +43,9 @@ canvas {
 }
 
 .col {
-  width:33%;
+  /*width:33%;*/
   float: left;
+  margin: auto;
 }
 
 .card {
@@ -116,4 +117,16 @@ img {
   margin: auto;
   max-width: 10rem;
   max-height: 10rem;
+}
+
+@media (min-width: 704px) {
+  .col.full {
+    width: 99.9999%;
+  }
+}
+
+@media (min-width: 993px) {
+  .col.third {
+    width: 33.3333%;
+  }
 }
