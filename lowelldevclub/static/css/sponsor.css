@@ -1,29 +1,52 @@
-@keyframes bgcolor {
-    0% {
-        background-color: #45a3e5
-    }
+/* ---- reset ---- */
 
-    30% {
-        background-color: #66bf39
-    }
-
-    60% {
-        background-color: #eb670f
-    }
-
-    90% {
-        background-color: #f35
-    }
-
-    100% {
-        background-color: #864cbf
-    }
+html {
+  box-sizing:border-box;
+}
+html, body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web';font-size: 17px;
+}
+*,*:before,*:after {
+  box-sizing:inherit
 }
 
 body {
-    -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    margin: auto;
+  margin: 0;
+  font:normal 85% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+.container {
+  margin: auto;
+  margin-top: 50px;
+  width: 75%;
+  background: white;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #B60606;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.body-particles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
