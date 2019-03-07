@@ -27,7 +27,7 @@ canvas {
   margin: auto;
   margin-top: 50px;
   width: 75%;
-  background: white;
+  background: #E5F3FF;
   padding: 25px;
 }
 
@@ -48,11 +48,14 @@ canvas {
 }
 
 .card {
+  background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
+  border-radius: 5px;
+  padding: none;
 }
 
 .title {
@@ -81,8 +84,9 @@ canvas {
   z-index: 100;
 }
 
-button {
+.card button {
   border: none;
+  border-radius: 5px;
   outline: 0;
   display: inline-block;
   padding: 8px;
@@ -92,6 +96,7 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  margin: none;
 }
 
 /*a {
