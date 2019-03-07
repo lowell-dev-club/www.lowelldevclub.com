@@ -121,12 +121,14 @@ img {
 }
 @media (min-width: 478px) {
   .col.no-float {
-    float:none;
+    float: none;
   }
 }
-/*@media (min-width: 482px) {
-  .row.
-}*/
+@media (min-width: 778px) {
+  .col.float-left {
+    float: left;
+  }
+}
 @media (min-width: 704px) {
   .col.full {
     width: 99.9999%;
