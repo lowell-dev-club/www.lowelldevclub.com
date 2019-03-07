@@ -1,5 +1,6 @@
 from lowelldevclub import app
 
+'''
 # run app
 app.run(
   # keep to local host for testing purposes
@@ -7,3 +8,4 @@ app.run(
   port=5000, # assign to port 5000
   debug=True # Have debug pages show when there is an error
 )
+'''
