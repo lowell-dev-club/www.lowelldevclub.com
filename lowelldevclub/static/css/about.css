@@ -120,17 +120,13 @@ img {
   max-height: 10rem;
 }
 @media (min-width: 478px) {
-  .row.padded {
-    padding-right: 10%;
-    padding-left: 10%;
+  .col.no-float {
+    float:none;
   }
 }
-@media (min-width: 482px) {
-  .row.no-padding {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
+/*@media (min-width: 482px) {
+  .row.
+}*/
 @media (min-width: 704px) {
   .col.full {
     width: 99.9999%;
