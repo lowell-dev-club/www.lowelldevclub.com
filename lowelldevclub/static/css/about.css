@@ -28,6 +28,13 @@ canvas {
   margin-top: 50px;
   width: 75%;
   background: white;
+  padding: 25px;
+}
+
+.rounded {
+  border-radius: 5px;
+  border-width: thin;
+  border-color: #E5F3FF;
 }
 .row {
   width: 100%;
