@@ -20,11 +20,11 @@ def sponsors():
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
-def robots(self):
+def robots():
     return render_template('seo/robots.txt')
 
 @app.route('/sitemap.xml', methods=['GET'])
-def sitemap(self):
+def sitemap():
     sitemap_xml = render_template('seo/sitemap.xml')
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
