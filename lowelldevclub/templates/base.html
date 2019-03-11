@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Title -->
 	<title>{% block title %}{% endblock %}</title>
+
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="theme-color" content="#ffffff">
+	<meta name=”viewport” content=”width=device-width,initial-scale=1″>
+	<meta name="keywords" content="Lowell High School Dev Club Hack Club">
+	<meta name="description" content="Website for Lowell High School's Dev Club.">
+	<meta name="msapplication-TileColor" content="#da532c">
+
+	<!-- Favicon -->
   <link rel="/static/img/apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
   <link rel="manifest" href="/static/img/site.webmanifest">
   <link rel="mask-icon" href="/static/img/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+
+	<!-- Facebook -->
+	<meta property="og:url" content="http://www.lowelldev.club">
+	<meta property="og:image" content="/static/img/High_Resolution_dev_club_logo.png">
+	<meta property="og:description" content="Website for Lowell High School's Dev Club.">
+	<meta property="og:title" content="Lowell Dev Club">
+	<meta property="og:site_name" content="Lowell Dev Club">
+	<meta property="og:see_also" content="http://www.lowelldev.club">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="Website for Lowell Dev Club">
+	<meta name="twitter:url" content="http://www.lowelldev.club">
+	<meta name="twitter:title" content="Lowell Dev Club">
+	<meta name="twitter:description" content="Website for Lowell High School's Dev Club.">
+	<meta name="twitter:image" content="/static/img/High_Resolution_dev_club_logo.png">
+
+	<!-- Google+ -->
+	<meta itemprop="name" content="Lowell Dev Club">
+	<meta itemprop="description" content="Website for Lowell High School's Dev Club.">
+	<meta itemprop="image" content="/static/img/High_Resolution_dev_club_logo.png">
   {% block head_css %}
   {% endblock %}
   {% block head_js %}
