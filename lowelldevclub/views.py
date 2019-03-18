@@ -1,5 +1,5 @@
 from lowelldevclub import app
-from flask import render_template, request, make_response, redirect
+from flask import render_template, request, make_response, redirect, send_file
 
 # User routes
 @app.route('/', methods=['GET'])
@@ -20,11 +20,11 @@ def sponsors():
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
-def robots(self):
-    return render_template('seo/robots.txt')
+def robots():
+    return send_file('templates/seo/robots.txt')
 
 @app.route('/sitemap.xml', methods=['GET'])
-def sitemap(self):
+def sitemap():
     sitemap_xml = render_template('seo/sitemap.xml')
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
