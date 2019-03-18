@@ -89,7 +89,8 @@ canvas {
 
 /* ---- css for social media icons ---- */
 .fab {
-  padding: 20px;
+  /*padding: 20px;*/
+  padding-right: 0px;
   font-size: 30px;
   width: 50px;
   text-align: center;
