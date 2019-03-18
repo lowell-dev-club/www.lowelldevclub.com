@@ -44,6 +44,7 @@ canvas {
   padding: 10px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   color: white;
   font-size: 40px;
 }
@@ -120,6 +121,13 @@ canvas {
   animation-duration: 5s;
   animation-delay: 1s;
   animation-fill-mode: both;
+  /* IE 9 */
+  -ms-transform-name: float-up;
+  -ms-transform-duration: 5s;
+  -ms-transform-delay: 1s;
+  -ms-transform-fill-mode: both;
+  text-align: center;
+  margin: auto;
 }
 
 .float-up-subtitle {
@@ -134,6 +142,11 @@ canvas {
   animation-duration: 5s;
   animation-delay: 2s;
   animation-fill-mode: both;
+  /* IE 9 */
+  -ms-transform-name: float-up;
+  -ms-transform-duration: 5s;
+  -ms-transform-delay: 2s;
+  -ms-transform-fill-mode: both;
 }
 
 /* Safari 4.0 - 8.0 */
@@ -141,8 +154,13 @@ canvas {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
-
+/* Standard */
 @keyframes float-up {
+  0% {top: 0px; opacity: 0;}
+  100% {top: -50px; opacity: 1;}
+}
+/* IE 9 */
+@-ms-keyframes float-up {
   0% {top: 0px; opacity: 0;}
   100% {top: -50px; opacity: 1;}
 }
