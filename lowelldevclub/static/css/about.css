@@ -27,7 +27,6 @@ canvas {
   margin: auto;
   margin-top: 50px;
   width: 75%;
-  background: #E5F3FF;
   padding: 25px;
 }
 
@@ -139,4 +138,11 @@ img {
   .col.third {
     width: 33.3333%;
   }
+}
+
+.social-media {
+  /*background: #3B5998;*/
+  color: rgb(221, 55, 55);
+  text-align: center;
+  text-decoration: none;
 }
