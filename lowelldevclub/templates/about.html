@@ -14,6 +14,8 @@ Lowell Dev Club About
 
 {% block head_js %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -29,7 +31,16 @@ Lowell Dev Club About
       <div style="clear:both"></div>
     </nav>
     <div class="container rounded">
-      <div class="row">
+      <div class="typed_wrap">
+        <h1><span class="about_us"></span></h1>
+      </div>
+      <div class="typed_wrap">
+        <p><span class="about_paragraph"></span></p>
+      </div>
+      <div class="typed_wrap">
+        <h1><span class="meet_leaders"></span></h1>
+      </div>
+      <div class="row extend-height fade-profiles">
         <div class="col third full no-float float-left">
           <div class="jumbotron card">
             <img src="static/img/rafael_profile.jpeg" alt="Rafael Cenzano">
@@ -148,23 +159,11 @@ Lowell Dev Club About
     </div>
   </div>
 
-  <footer class="footer">
-		<div class="footer-right">
-			<a href="https://www.facebook.com/Lowell-Dev-Club-555840741569907/" class="fab fa-facebook" target="_blank"></a>
-			<a href="https://www.instagram.com/lowelldevclub/" class="fab fa-instagram" target="_blank"></a>
-			<a href="https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY" class="fab fa-slack" target="_blank"></a>
-			<a href="https://discord.gg/23hwRXE" class="fab fa-discord" target="_blank"></a>
-			<a href="https://github.com/lowell-dev-club" class="fab fa-github" target="_blank"></a>
-		</div>
-	</footer>
-
 	<div id="particles-js"></div>
 
-  <!-- <script type="text/javascript" src="static/js/about.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10/src/typed.js"></script> -->
 {% endblock %}
 
 {% block trailing_js %}
 <script type="text/javascript" src="static/js/home.js"></script>
+<script type="text/javascript" src="static/js/about.js"></script>
 {% endblock %}
