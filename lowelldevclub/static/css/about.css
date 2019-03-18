@@ -38,6 +38,8 @@ canvas {
 }
 .row {
   width: 100%;
+  height: 0px;
+  max-height: 500px;
   padding: none;
   margin: auto;
 }
@@ -166,5 +168,60 @@ img {
 @media (min-width: 993px) {
   .col.third {
     width: 33.3333%;
+  }
+}
+
+/* ---- css to fade in the home page ---- */
+.fade-profiles {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+  animation-delay: 4s;
+  -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: 500px;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: 500px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: 500px;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: 500px;
   }
 }
