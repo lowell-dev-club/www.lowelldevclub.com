@@ -42,6 +42,8 @@ canvas {
   max-height: 500px;
   padding: none;
   margin: auto;
+  position: relative;
+  opacity: 0;
 }
 
 .col {
@@ -173,19 +175,25 @@ img {
 
 /* ---- css to fade in the home page ---- */
 .fade-profiles {
-  animation: fadeIn ease 5s;
-  -webkit-animation: fadeIn ease 5s;
-  -moz-animation: fadeIn ease 5s;
-  -o-animation: fadeIn ease 5s;
-  -ms-animation: fadeIn ease 5s;
+  animation: fadeIn ease 5s forwards;
+  -webkit-animation: fadeIn ease 5s forwards;
+  -moz-animation: fadeIn ease 5s forwards;
+  -o-animation: fadeIn ease 5s forwards;
+  -ms-animation: fadeIn ease 5s forwards;
   animation-delay: 4s;
   -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
 }
 
 @keyframes fadeIn{
   0% {
-    opacity:0;
     height: 0px;
+  }
+  25% {
+    height: 500px;
+  }
+  50% {
+    opacity: 0%;
+    height: 500px;
   }
   100% {
     opacity:1;
@@ -195,8 +203,14 @@ img {
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
     height: 0px;
+  }
+  25% {
+    height: 500px;
+  }
+  50% {
+    opacity: 0%;
+    height: 500px;
   }
   100% {
     opacity:1;
@@ -206,8 +220,14 @@ img {
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
     height: 0px;
+  }
+  25% {
+    height: 500px;
+  }
+  50% {
+    opacity: 0%;
+    height: 500px;
   }
   100% {
     opacity:1;
@@ -217,8 +237,14 @@ img {
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
     height: 0px;
+  }
+  25% {
+    height: 500px;
+  }
+  50% {
+    opacity: 0%;
+    height: 500px;
   }
   100% {
     opacity:1;
