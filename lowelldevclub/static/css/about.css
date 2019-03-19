@@ -23,6 +23,10 @@ canvas {
   vertical-align: bottom;
 }
 
+h1, h3 {
+  text-align: center;
+}
+
 .container {
   margin: auto;
   margin-top: 50px;
