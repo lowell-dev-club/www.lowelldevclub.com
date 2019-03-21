@@ -31,6 +31,7 @@ Lowell Dev Club About
       <div style="clear:both"></div>
     </nav>
     <div class="container rounded">
+      <p id="demo"></p>
       <div class="typed_wrap">
         <h1><span class="about_us"></span></h1>
       </div>
@@ -168,4 +169,25 @@ Lowell Dev Club About
 {% block trailing_js %}
 <script type="text/javascript" src="static/js/home.js"></script>
 <script type="text/javascript" src="static/js/about.js"></script>
+<script>
+var i = 0;
+var txt = 'Lorem ipsum dummy text blabla.';
+var speed = 10;
+var delayInMilliseconds = 1000
+setTimeout(function() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+}, delayInMilliseconds);
+  
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 {% endblock %}
