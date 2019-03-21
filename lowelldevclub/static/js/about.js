@@ -10,7 +10,7 @@ $(function(){
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
-		typeSpeed: 30,
+		typeSpeed: 0,
 		// time before typing starts
 		startDelay: 0,
 		// backspacing speed
@@ -43,7 +43,7 @@ $(function(){
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
-		typeSpeed: 10,
+		typeSpeed: 40,
 		// time before typing starts
 		startDelay: 1200,
 		// backspacing speed
@@ -76,7 +76,7 @@ $(function(){
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
-		typeSpeed: 30,
+		typeSpeed: 40,
 		// time before typing starts
 		startDelay: 2400,
 		// backspacing speed
