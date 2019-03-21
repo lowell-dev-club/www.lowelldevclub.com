@@ -23,12 +23,17 @@ canvas {
   vertical-align: bottom;
 }
 
+h1, h3 {
+  text-align: center;
+}
+
 .container {
   margin: auto;
   margin-top: 50px;
   width: 75%;
   background: #E5F3FF;
   padding: 25px;
+  background: #E5F3FF;
 }
 
 .rounded {
