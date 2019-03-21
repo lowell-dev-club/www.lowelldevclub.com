@@ -53,6 +53,13 @@ canvas {
   font-size: 15px;
 }
 
+.mobile-title {display:none;}
+.desktop-title {display:block;}
+
+@media (max-width : 320px) {
+    .mobile-title {display:block;}
+    .desktop-title {display:none;}
+}
 /* ---- css to fade in the home page ---- */
 .fade-in {
   animation: fadeIn ease 5s;
