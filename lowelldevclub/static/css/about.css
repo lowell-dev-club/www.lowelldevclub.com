@@ -27,6 +27,7 @@ canvas {
   margin: auto;
   margin-top: 50px;
   width: 75%;
+  background: #E5F3FF;
   padding: 25px;
 }
 
@@ -37,14 +38,18 @@ canvas {
 }
 .row {
   width: 100%;
-  height: 0px;
-  max-height: 500px;
+  /*height: 0px;*/
+  max-height: 550px;
   padding: none;
   margin: auto;
   position: relative;
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
+.profile-card-container {
+  opacity: 0;
+  height: 0px;
+}
 .col {
   /*width:33%;*/
   float: left;
@@ -193,15 +198,15 @@ img {
     height: 0px;
   }
   25% {
-    height: 500px;
+    height: 1100px;
   }
   50% {
     opacity: 0%;
-    height: 500px;
+    height: 1100px;
   }
   100% {
     opacity:1;
-    height: 500px;
+    height: 1100px;
   }
 }
 
@@ -210,15 +215,15 @@ img {
     height: 0px;
   }
   25% {
-    height: 500px;
+    height: 1100px;
   }
   50% {
     opacity: 0%;
-    height: 500px;
+    height: 1100px;
   }
   100% {
     opacity:1;
-    height: 500px;
+    height: 1100px;
   }
 }
 
@@ -227,15 +232,15 @@ img {
     height: 0px;
   }
   25% {
-    height: 500px;
+    height: 1100px;
   }
   50% {
     opacity: 0%;
-    height: 500px;
+    height: 1100px;
   }
   100% {
     opacity:1;
-    height: 500px;
+    height: 1100px;
   }
 }
 
@@ -244,14 +249,14 @@ img {
     height: 0px;
   }
   25% {
-    height: 500px;
+    height: 1100px;
   }
   50% {
     opacity: 0%;
-    height: 500px;
+    height: 1100px;
   }
   100% {
     opacity:1;
-    height: 500px;
+    height: 1100px;
   }
 }
