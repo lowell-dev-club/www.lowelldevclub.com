@@ -30,6 +30,7 @@ h1, h3 {
 .container {
   margin: auto;
   margin-top: 50px;
+  margin-bottom: 10px;
   width: 75%;
   background: #E5F3FF;
   padding: 25px;
@@ -220,15 +221,15 @@ img {
     height: 0px;
   }
   25% {
-    height: 1100px;
+    height: 1000px;
   }
   50% {
     opacity: 0%;
-    height: 1100px;
+    height: 1000px;
   }
   100% {
     opacity:1;
-    height: 1100px;
+    height: 1000px;
   }
 }
 
@@ -237,15 +238,15 @@ img {
     height: 0px;
   }
   25% {
-    height: 1100px;
+    height: 1000px;
   }
   50% {
     opacity: 0%;
-    height: 1100px;
+    height: 1000px;
   }
   100% {
     opacity:1;
-    height: 1100px;
+    height: 1000px;
   }
 }
 
@@ -254,14 +255,14 @@ img {
     height: 0px;
   }
   25% {
-    height: 1100px;
+    height: 1000px;
   }
   50% {
     opacity: 0%;
-    height: 1100px;
+    height: 1000px;
   }
   100% {
     opacity:1;
-    height: 1100px;
+    height: 1000px;
   }
 }
