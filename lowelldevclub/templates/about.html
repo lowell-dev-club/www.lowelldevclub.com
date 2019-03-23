@@ -31,12 +31,11 @@ Lowell Dev Club About
       <div style="clear:both"></div>
     </nav>
     <div class="container rounded">
-      <p id="demo"></p>
       <div class="typed_wrap">
         <u><h1><span class="about_us"></span></h1></u>
       </div>
       <div class="typed_wrap">
-        <h3><span class="about_paragraph"></span></h3>
+        <h3><span class="about_paragraph" id="about_paragraph"></span></h3>
       </div>
       <div class="typed_wrap">
         <h2><span class="meet_leaders"></span></h2>
@@ -64,7 +63,7 @@ Lowell Dev Club About
           </div>
           <div class="col third full no-float float-left">
             <div class="jumbotron card">
-              <img src="static/img/cap.jpg" alt="Cappillen Lee" style="width:100%">
+              <img src="static/img/cap.jpeg" alt="Cappillen Lee" style="width:100%">
               <h1>Cappillen Lee</h1>
               <p class="title">Co-President</p>
               <p>
@@ -140,7 +139,7 @@ Lowell Dev Club About
           </div>
           <div class="col third full no-float float-left">
             <div class="jumbotron card">
-              <img src="static/img/mscernuto.jpeg" alt="Michelle Cernuto" style="width:100%">
+              <img src="static/img/mscernuto.jpg" alt="Michelle Cernuto" style="width:100%">
               <h1>Michelle Cernuto</h1>
               <p class="title">Teacher Sponsor</p>
               <p>
@@ -169,25 +168,4 @@ Lowell Dev Club About
 {% block trailing_js %}
 <script type="text/javascript" src="static/js/home.js"></script>
 <script type="text/javascript" src="static/js/about.js"></script>
-<script>
-var i = 0;
-var txt = 'Lorem ipsum dummy text blabla.';
-var speed = 10;
-var delayInMilliseconds = 1000
-setTimeout(function() {
-    if (i < txt.length) {
-      document.getElementById("demo").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-}, delayInMilliseconds);
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-</script>
 {% endblock %}
