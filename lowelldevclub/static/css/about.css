@@ -44,8 +44,8 @@ h1, h3 {
 }
 .row {
   width: 100%;
-  /*height: 0px;*/
-  max-height: 550px;
+  height: auto;
+  /*max-height: 550px;*/
   padding: none;
   margin: auto;
   position: relative;
@@ -166,6 +166,16 @@ img {
   max-width: 10rem;
   max-height: 10rem;
 }
+
+/*@media (max-width: 1000px) {
+  .row {
+    height: 1000px;
+  }
+}*/
+
+@media screen and (min-width: 650px) {
+  
+}
 @media (min-width: 478px) {
   .col.no-float {
     float: none;
@@ -185,6 +195,9 @@ img {
 @media (min-width: 993px) {
   .col.third {
     width: 33.3333%;
+  }
+  .col {
+    width: 500px;
   }
 }
 .social-media {
