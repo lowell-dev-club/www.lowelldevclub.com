@@ -268,8 +268,8 @@ img {
   -moz-animation: fadeIn ease 5s forwards;
   -o-animation: fadeIn ease 5s forwards;
   -ms-animation: fadeIn ease 5s forwards;
-  animation-delay: 3s;
-  -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s; /* Safari 4.0 - 8.0 */
 }
 
 @media screen and (max-width: 600px) {
@@ -279,8 +279,8 @@ img {
     -moz-animation: fadeIn-mobile ease 5s forwards;
     -o-animation: fadeIn-mobile ease 5s forwards;
     -ms-animation: fadeIn-mobile ease 5s forwards;
-    animation-delay: 3s;
-    -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s; /* Safari 4.0 - 8.0 */
   }
 }
 
