@@ -272,6 +272,18 @@ img {
   -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
 }
 
+@media screen and (max-width: 600px) {
+  .fade-profiles {
+    animation: fadeIn-mobile ease 5s forwards;
+    -webkit-animation: fadeIn-mobile ease 5s forwards;
+    -moz-animation: fadeIn-mobile ease 5s forwards;
+    -o-animation: fadeIn-mobile ease 5s forwards;
+    -ms-animation: fadeIn-mobile ease 5s forwards;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+  }
+}
+
 @keyframes fadeIn{
   0% {
     height: 0px;
@@ -323,7 +335,7 @@ img {
   }
 }
 
-@-o-keyframes fadeIn {
+@-o-keyframes fadeIn-mobile {
   0% {
     height: 0px;
   }
@@ -337,5 +349,56 @@ img {
   100% {
     opacity:1;
     height: 1000px;
+  }
+}
+
+@-moz-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
+  }
+}
+
+@-webkit-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
+  }
+}
+
+@-o-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
   }
 }
