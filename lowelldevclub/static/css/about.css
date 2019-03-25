@@ -80,6 +80,11 @@ h1, h3 {
   font-size: 18px;
 }
 
+.about_paragraph {
+  opacity: 0;
+  height: 0px;
+}
+
 /* ---- particles.js container ---- */
 
 #particles-js {
@@ -188,15 +193,70 @@ img {
   text-align: center;
   text-decoration: none;
 }
+
 /* ---- css to fade in the home page ---- */
+.fade-about-paragraph {
+  animation: fadeInParagraph ease 3s forwards;
+  -webkit-animation: fadeInParagraph ease 3s forwards;
+  -moz-animation: fadeInParagraph ease 3s forwards;
+  -o-animation: fadeInParagraph ease 3s forwards;
+  -ms-animation: fadeInParagraph ease 3s forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+
+}
+
+@keyframes fadeInParagraph{
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-moz-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-webkit-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-o-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
 .fade-profiles {
   animation: fadeIn ease 5s forwards;
   -webkit-animation: fadeIn ease 5s forwards;
   -moz-animation: fadeIn ease 5s forwards;
   -o-animation: fadeIn ease 5s forwards;
   -ms-animation: fadeIn ease 5s forwards;
-  animation-delay: 4s;
-  -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+  animation-delay: 3s;
+  -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
 }
 
 @keyframes fadeIn{
