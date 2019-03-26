@@ -8,6 +8,7 @@
 }
 .navbar-text {
   color: #FFF !important;
+  margin: auto;
 }
 .navbar-right {
   float:right;
@@ -19,4 +20,13 @@
   font: 10px;
   text-decoration: none;
   color: #000;
+}
+#test {
+  float: left;
+}
+.navbar img {
+  max-width: 100px;
+  max-height: 36px;
+  margin: -10px;
+  float: left;
 }
