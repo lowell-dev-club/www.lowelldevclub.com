@@ -34,6 +34,10 @@ def sitemap():
     response.headers["Content-Type"] = "application/xml"
     return response
 
+@app.route('/yougotpranked', methods=['GET'])
+def prank():
+    return render_template('surprise.html')
+    
 # Error handelers
 @app.errorhandler(404)
 def page_not_found(e):
