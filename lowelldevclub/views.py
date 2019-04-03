@@ -33,42 +33,6 @@ def sitemap():
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
     return response
-
-@app.route('/yougotpranked', methods=['GET'])
-def prank():
-    import smtplib # smtplib for connection and sending of email
-    from email.mime.text import MIMEText # MIMEText for formatting
-    from email.mime.multipart import MIMEMultipart # MIMEMultipart changing sender
-    recipient_email = 'savagecoder77@gmail.com'
-    recipient_email2 = 'cap1jedi@gmail.com'
-    email_user = 'tomodachijcyc@gmail.com'
-    email_pass = 'g284tSNXVPdBHTx'
-    subject = 'prank'
-    email_message = 'prank done'
-
-    marvin_name = ('prank alert <' + email_user + '>')
-    msg = MIMEMultipart() # formatting
-    msg['From'] = marvin_name
-    msg['To'] = recipient_email # input recipient email
-    msg['Subject'] = subject # input subject
-    msg.attach(MIMEText(email_message,'plain')) # add body
-    message = msg.as_string() # format all text
-
-    smtp_server = smtplib.SMTP('smtp.gmail.com', 587) # connection to 587 port for gmail
-    smtp_server.ehlo_or_helo_if_needed()
-    smtp_server.starttls() # start connection
-    smtp_server.ehlo_or_helo_if_needed()
-    smtp_server.login(email_user, email_pass) # login with credentials
-    smtp_server.sendmail(email_user, recipient_email, message) # send email
-    smtp_server.quit() # quit connection
-    smtp_server2 = smtplib.SMTP('smtp.gmail.com', 587) # connection to 587 port for gmail
-    smtp_server2.ehlo_or_helo_if_needed()
-    smtp_server2.starttls() # start connection
-    smtp_server2.ehlo_or_helo_if_needed()
-    smtp_server2.login(email_user, email_pass) # login with credentials
-    smtp_server2.sendmail(email_user, recipient_email2, message) # send email
-    smtp_server2.quit() # quit connection
-    return render_template('surprise.html')
     
 # Error handelers
 @app.errorhandler(404)
