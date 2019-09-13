@@ -44,8 +44,8 @@ h1, h3 {
 }
 .row {
   width: 100%;
-  /*height: 0px;*/
-  max-height: 550px;
+  height: auto;
+  /*max-height: 550px;*/
   padding: none;
   margin: auto;
   position: relative;
@@ -78,6 +78,11 @@ h1, h3 {
 .title {
   color: grey;
   font-size: 18px;
+}
+
+.about_paragraph {
+  opacity: 0;
+  height: 0px;
 }
 
 /* ---- particles.js container ---- */
@@ -161,6 +166,16 @@ img {
   max-width: 10rem;
   max-height: 10rem;
 }
+
+/*@media (max-width: 1000px) {
+  .row {
+    height: 1000px;
+  }
+}*/
+
+@media screen and (min-width: 650px) {
+  
+}
 @media (min-width: 478px) {
   .col.no-float {
     float: none;
@@ -181,6 +196,9 @@ img {
   .col.third {
     width: 33.3333%;
   }
+  .col {
+    width: 500px;
+  }
 }
 .social-media {
   /*background: #3B5998;*/
@@ -188,15 +206,82 @@ img {
   text-align: center;
   text-decoration: none;
 }
+
 /* ---- css to fade in the home page ---- */
+.fade-about-paragraph {
+  animation: fadeInParagraph ease 3s forwards;
+  -webkit-animation: fadeInParagraph ease 3s forwards;
+  -moz-animation: fadeInParagraph ease 3s forwards;
+  -o-animation: fadeInParagraph ease 3s forwards;
+  -ms-animation: fadeInParagraph ease 3s forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+
+}
+
+@keyframes fadeInParagraph{
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-moz-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-webkit-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
+
+@-o-keyframes fadeInParagraph {
+  0% {
+    opacity:0;
+    height: 0px;
+  }
+  100% {
+    opacity:1;
+    height: auto;
+  }
+}
 .fade-profiles {
   animation: fadeIn ease 5s forwards;
   -webkit-animation: fadeIn ease 5s forwards;
   -moz-animation: fadeIn ease 5s forwards;
   -o-animation: fadeIn ease 5s forwards;
   -ms-animation: fadeIn ease 5s forwards;
-  animation-delay: 4s;
-  -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s; /* Safari 4.0 - 8.0 */
+}
+
+@media screen and (max-width: 600px) {
+  .fade-profiles {
+    animation: fadeIn-mobile ease 5s forwards;
+    -webkit-animation: fadeIn-mobile ease 5s forwards;
+    -moz-animation: fadeIn-mobile ease 5s forwards;
+    -o-animation: fadeIn-mobile ease 5s forwards;
+    -ms-animation: fadeIn-mobile ease 5s forwards;
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s; /* Safari 4.0 - 8.0 */
+  }
 }
 
 @keyframes fadeIn{
@@ -250,7 +335,7 @@ img {
   }
 }
 
-@-o-keyframes fadeIn {
+@-o-keyframes fadeIn-mobile {
   0% {
     height: 0px;
   }
@@ -264,5 +349,56 @@ img {
   100% {
     opacity:1;
     height: 1000px;
+  }
+}
+
+@-moz-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
+  }
+}
+
+@-webkit-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
+  }
+}
+
+@-o-keyframes fadeIn-mobile {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 3000px;
+  }
+  50% {
+    opacity: 0%;
+    height: 3000px;
+  }
+  100% {
+    opacity:1;
+    height: 3000px;
   }
 }

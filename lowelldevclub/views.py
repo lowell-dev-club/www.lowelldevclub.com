@@ -17,7 +17,11 @@ def partners():
 @app.route('/sponsors', methods=['GET'])
 def sponsors():
     return render_template('sponsors.html')
-'''
+
+@app.route('/joinslack', methods=['GET'])
+def joinslack():
+    return redirect("https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY", code=302)
+
 # SEO
 @app.route('/robots.txt', methods=['GET'])
 def robots():
@@ -29,7 +33,7 @@ def sitemap():
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
     return response
-
+    
 # Error handelers
 @app.errorhandler(404)
 def page_not_found(e):
