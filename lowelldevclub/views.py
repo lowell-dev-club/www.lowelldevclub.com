@@ -13,11 +13,11 @@ def about():
 @app.route('/partners', methods=['GET'])
 def partners():
     return render_template('partners.html')
-
+'''
 @app.route('/sponsors', methods=['GET'])
 def sponsors():
     return render_template('sponsors.html')
-
+'''
 # SEO
 @app.route('/robots.txt', methods=['GET'])
 def robots():
