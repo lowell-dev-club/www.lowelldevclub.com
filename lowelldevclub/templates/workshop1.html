@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lowell Dev Club Workshop
+{% endblock %}
+
+{% block head_css %}
+	<link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/about.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+	<div id="particles-js"></div>
+
+	<nav class="navbar">
+		<a href="/" class="navbar-text" id="test"><img src="static/img/logo-transparent.png"></a>
+		<div class="navbar-right">
+			<a href="/about" class="navbar-text" id="">About</a>
+		  	<a href="/partners" class="navbar-text" id="">Partners</a>
+		  	<!--<a href="/sponsors" class="navbar-text" id="">Sponsors</a>-->
+		</div>
+  		<div style="clear:both"></div>
+	</nav>
+
+	<div class="container rounded">
+    <h2><span class="meet_leaders">Flask Workshop:</span></h2>
+    <p>1. <a href="https://repl.it/signup">https://repl.it/signup</a></p>
+	</div>
+
+{% endblock %}
+
+{% block trailing_js %}
+  <script type="text/javascript" src="static/js/home.js"></script>
+  <script type="text/javascript" src="static/js/about.js"></script>
+{% endblock %}
