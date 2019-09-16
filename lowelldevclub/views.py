@@ -22,6 +22,10 @@ def sponsors():
 def joinslack():
     return redirect("https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY", code=302)
 
+@app.route('/workshop', methods=['GET'])
+def workshop():
+    return render_template('workshop1.html')
+
 # SEO
 @app.route('/robots.txt', methods=['GET'])
 def robots():
