@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Lowell Dev Club Home
+Lowell Dev Club Workshop
 {% endblock %}
 
 {% block head_css %}
 	<link rel="stylesheet" href="static/css/navbar.css">
-	<link rel="stylesheet" href="static/css/footer.css">
-	<link rel="stylesheet" href="static/css/home.css">
+  <link rel="stylesheet" href="static/css/about.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
@@ -17,9 +16,6 @@ Lowell Dev Club Home
 {% endblock %}
 
 {% block content %}
-
-	<!-- Wrapper for all html elements for fade in effect -->
-	<div class="fade-in">
 
 	<div id="particles-js"></div>
 
@@ -33,17 +29,14 @@ Lowell Dev Club Home
   		<div style="clear:both"></div>
 	</nav>
 
-	<div class="center">
-		<h1 class="float-up mobile-title">
-		Lowell<br />
-		Dev<br />
-		Club<br />
-		</h1>
-		<h1 class="float-up desktop-title">Lowell Dev Club</h1>
-		<p class="float-up-subtitle">Meetings every Thursday in room 336</p>
-		<p class="float-up-subtitle"><a href="/workshop" class="workshop">This weeks workshop!</a></p>
+	<div class="container rounded">
+    <h2><span class="meet_leaders">Flask Workshop:</span></h2>
+    <p>1. <a href="https://repl.it/signup">https://repl.it/signup</a></p>
 	</div>
 
-	</div>
-	<script type="text/javascript" src="static/js/home.js"></script>
+{% endblock %}
+
+{% block trailing_js %}
+  <script type="text/javascript" src="static/js/home.js"></script>
+  <script type="text/javascript" src="static/js/about.js"></script>
 {% endblock %}
