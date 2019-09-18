@@ -26,9 +26,13 @@ def joinslack():
 def workshop():
     return render_template('workshop_construction.html')
 
-@app.route('/workshop/hack', methods=['GET'])
-def hack():
+@app.route('/workshop/hack1', methods=['GET'])
+def hack1():
     return redirect('https://hackclub.com/workshops/personal_website#part-iii-the-css-file')
+
+@app.route('/workshop/hack2', methods=['GET'])
+def hack2():
+    return redirect('https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules')
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
