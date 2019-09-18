@@ -24,7 +24,7 @@ def joinslack():
 
 @app.route('/workshop', methods=['GET'])
 def workshop():
-    return render_template('workshop1.html')
+    return render_template('workshop_construction.html')
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
