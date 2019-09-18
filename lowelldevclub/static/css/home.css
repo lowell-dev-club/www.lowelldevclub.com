@@ -156,6 +156,14 @@ canvas {
   -ms-transform-fill-mode: both;
 }
 
+.workshop {
+  text-decoration: none;
+  color: white;
+}
+.workshop:hover {
+  color: #ddd;
+}
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes float-up {
   0% {top: 0px; opacity: 0;}
