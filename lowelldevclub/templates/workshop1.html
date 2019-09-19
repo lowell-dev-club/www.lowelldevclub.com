@@ -1,42 +1,50 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Lowell Dev Club Workshop
+Lowell Dev Club About
 {% endblock %}
 
 {% block head_css %}
-	<link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/navbar.css">
+  <link rel="stylesheet" href="static/css/footer.css">
   <link rel="stylesheet" href="static/css/about.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
 
 {% block head_js %}
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 {% endblock %}
 
 {% block content %}
 
-	<div id="particles-js"></div>
+  <div class="body-particles">
+    <nav class="navbar">
+    <a href="/" class="navbar-text" id="test"><img src="static/img/logo-transparent.png"></a>
+      <div class="navbar-right">
+        <a href="/about" class="navbar-text">About</a>
+        <a href="/partners" class="navbar-text">Partners</a>
+        <!--<a href="/sponsors" class="navbar-text">Sponsors</a>-->
+      </div>
+      <div style="clear:both"></div>
+    </nav>
+    <div class="container rounded">
+      <div class="typed_wrap">
+        <u><h1><span class="flask"></span></h1></u>
+      </div>
+      <div class="typed_wrap"><a href="https://repl.it/signup" class="plz"><h2><span class="link1" id="link1"></span></h2></a></div>
+      <div class="typed_wrap"><a href="/workshop/hack1" class="plz"><h2><span class="link2" id="link2"></span></h2></a></div>
+      <div class="typed_wrap"><a href="/workshop/hack2" class="plz"><h2><span class="link3" id="link3"></span></h2></a></div>
+    </div>
+  </div>
 
-	<nav class="navbar">
-		<a href="/" class="navbar-text" id="test"><img src="static/img/logo-transparent.png"></a>
-		<div class="navbar-right">
-			<a href="/about" class="navbar-text" id="">About</a>
-		  	<a href="/partners" class="navbar-text" id="">Partners</a>
-		  	<!--<a href="/sponsors" class="navbar-text" id="">Sponsors</a>-->
-		</div>
-  		<div style="clear:both"></div>
-	</nav>
-
-	<div class="container rounded">
-    <h2><span class="meet_leaders">Flask Workshop:</span></h2>
-    <p>1. <a href="https://repl.it/signup">https://repl.it/signup</a></p>
-	</div>
+  <div id="particles-js"></div>
 
 {% endblock %}
 
 {% block trailing_js %}
-  <script type="text/javascript" src="static/js/home.js"></script>
-  <script type="text/javascript" src="static/js/about.js"></script>
+<script type="text/javascript" src="static/js/home.js"></script>
+<script type="text/javascript" src="static/js/workshop.js"></script>
 {% endblock %}
