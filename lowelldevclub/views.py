@@ -26,6 +26,10 @@ def joinslack():
 def workshop():
     return render_template('workshop1.html')
 
+@app.route('/workshop/old', methods=['GET'])
+def workshop_old():
+    return render_template('workshop1.html')
+
 @app.route('/workshop/hack1', methods=['GET'])
 def hack1():
     return redirect('https://hackclub.com/workshops/personal_website#part-iii-the-css-file')
