@@ -34,7 +34,7 @@ Lowell Dev Club About
     <div class="container rounded">
       <ol>
       {% for items in old_workshops %}
-        <li><p><a href="{% items %}"></a></p></li>
+        <li><p><a href="{{ items }}"></a>{{ items }}</p></li>
       {% endfor %}
     </ol>
     </div>
