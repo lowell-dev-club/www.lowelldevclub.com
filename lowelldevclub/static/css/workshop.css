@@ -21,7 +21,7 @@
   padding: 15px 20px;
   position: relative;
 }
-.links-for-workshop:after {    
+.links-for-workshop:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -36,4 +36,7 @@
 .links-for-workshop:hover:after { 
   width: 100%; 
   left: 0; 
+}
+.centering {
+  text-align: center;
 }
