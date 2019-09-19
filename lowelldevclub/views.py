@@ -34,8 +34,11 @@ def workshop_old():
     return render_template('old_workshop.html', old_workshops=old_workshops)
 
 @app.route('/workshop/old/<workshop_name>', methods=['GET'])
-def workshop_old_displaying(num):
-    return render_template(file_name)
+def workshop_old_displaying(workshop_name):
+    for items in old_workshops:
+        if workshop_name == items:
+            return render_template(items)
+    return 'Archived workshop doesn\'t exsist'
 
 @app.route('/workshop/hack<int:num>', methods=['GET'])
 def hack(num):
