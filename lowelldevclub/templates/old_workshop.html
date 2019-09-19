@@ -32,12 +32,14 @@ Lowell Dev Club About
       <div style="clear:both"></div>
     </nav>
     <div class="container rounded">
-      <div class="typed_wrap">
-        <u><h1><span class="construction"></span></h1></u>
-      </div>
-      <div class="typed_wrap">
-        <h2><a href="https://github.com/lowell-dev-club" class="plz"><span class="message" id="message"></span></a></h2>
-      </div>
+      <h1 class="centering">Workshops</h1>
+      <h2 class="centering"><a href="/workshop">Current Workshop</a></h2>
+      <br>
+      <ol>
+      {% for items in old_workshops %}
+        <li><p><a href="/workshop/old/{{ items }}">{{ items }}</a></p></li>
+      {% endfor %}
+    </ol>
     </div>
   </div>
 
@@ -47,5 +49,4 @@ Lowell Dev Club About
 
 {% block trailing_js %}
 <script type="text/javascript" src="static/js/home.js"></script>
-<script type="text/javascript" src="static/js/workshop.js"></script>
 {% endblock %}

@@ -24,7 +24,27 @@ def joinslack():
 
 @app.route('/workshop', methods=['GET'])
 def workshop():
-    return render_template('workshop_construction.html')
+    return render_template('workshop1.html')
+
+old_workshops = ['workshop1.html']
+short_links = ['https://hackclub.com/workshops/personal_website#part-iii-the-css-file','https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules']
+
+@app.route('/workshop/old', methods=['GET'])
+def workshop_old():
+    return render_template('old_workshop.html', old_workshops=old_workshops)
+
+@app.route('/workshop/old/<workshop_name>', methods=['GET'])
+def workshop_old_displaying(workshop_name):
+    for items in old_workshops:
+        if workshop_name == items:
+            return render_template(items)
+    return 'Archived workshop doesn\'t exsist'
+
+@app.route('/workshop/hack<int:num>', methods=['GET'])
+def hack(num):
+    if num - 1 > len(short_links) or num <= 0:
+        return 'Short link doesn\'t exsist'
+    return redirect(short_links[num - 1])
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
