@@ -6,9 +6,9 @@
 
       <loc>https://www.lowelldev.club/</loc>
 
-      <lastmod>2019-3-10</lastmod>
+      <lastmod>2019-9-18</lastmod>
 
-      <changefreq>yearly</changefreq>
+      <changefreq>monthly</changefreq>
 
       <priority>0.9</priority>
 
@@ -18,7 +18,7 @@
 
       <loc>https://www.lowelldev.club/about</loc>
 
-      <lastmod>2019-3-10</lastmod>
+      <lastmod>2019-9-17</lastmod>
 
       <changefreq>monthly</changefreq>
 
@@ -31,18 +31,18 @@
       <loc>https://www.lowelldev.club/partners</loc>
 
       <lastmod>2019-3-10</lastmod>
-
-      <changefreq>yearly</changefreq>
-
+      
       <priority>0.5</priority>
 
    </url>
 
    <url>
 
-      <loc>https://www.lowelldev.club/sponsors</loc>
+      <loc>https://www.lowelldev.club/workshop</loc>
 
-      <lastmod>2019-3-10</lastmod>
+      <lastmod>2019-9-18</lastmod>
+
+      <changefreq>weekly</changefreq>
 
       <priority>0.5</priority>
 
