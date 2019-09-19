@@ -24,7 +24,7 @@ def joinslack():
 
 @app.route('/workshop', methods=['GET'])
 def workshop():
-    return render_template('workshop_construction.html')
+    return render_template('workshop1.html')
 
 @app.route('/workshop/hack1', methods=['GET'])
 def hack1():
