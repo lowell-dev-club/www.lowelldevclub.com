@@ -27,22 +27,21 @@ def workshop():
     return render_template('workshop1.html')
 
 old_workshops = ['workshop1.html']
+short_links = ['https://hackclub.com/workshops/personal_website#part-iii-the-css-file','https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules']
 
 @app.route('/workshop/old', methods=['GET'])
 def workshop_old():
-    workshops_old = []
-    for items in old_workshops:
-        removed_html = items.split(".")[0]
-        workshop_old.append(removed_html)
-    return render_template('old_workshop.html', old_workshops=old_workshops, workshops_old=workshops_old)
+    return render_template('old_workshop.html', old_workshops=old_workshops)
 
-@app.route('/workshop/hack1', methods=['GET'])
-def hack1():
-    return redirect('https://hackclub.com/workshops/personal_website#part-iii-the-css-file')
+@app.route('/workshop/old/<workshop_name>', methods=['GET'])
+def workshop_old_displaying(num):
+    return render_template(file_name)
 
-@app.route('/workshop/hack2', methods=['GET'])
-def hack2():
-    return redirect('https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules')
+@app.route('/workshop/hack<int:num>', methods=['GET'])
+def hack(num):
+    if num - 1 > len(short_links) or num <= 0:
+        return 'Short link doesn\'t exsist'
+    return redirect(short_links[num - 1])
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
