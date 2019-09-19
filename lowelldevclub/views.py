@@ -26,9 +26,15 @@ def joinslack():
 def workshop():
     return render_template('workshop1.html')
 
+old_workshops = ['workshop1.html']
+
 @app.route('/workshop/old', methods=['GET'])
 def workshop_old():
-    return render_template('workshop1.html')
+    workshops_old = []
+    for items in old_workshops:
+        removed_html = items.split(".")[0]
+        workshop_old.append(removed_html)
+    return render_template('old_workshop.html', old_workshops=old_workshops, workshops_old=workshops_old)
 
 @app.route('/workshop/hack1', methods=['GET'])
 def hack1():
