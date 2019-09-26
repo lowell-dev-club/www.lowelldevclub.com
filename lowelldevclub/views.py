@@ -41,7 +41,7 @@ def workshop():
     return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1]), 301
 
 @app.route('/$', methods=['GET'])
-def workshop():
+def workshopfix():
     return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1]), 301
 
 @app.route('/workshop/hack<int:num>', methods=['GET'])
