@@ -1,5 +1,5 @@
 from lowelldevclub import app
-from flask import render_template, request, make_response, redirect, send_file
+from flask import render_template, request, make_response, redirect, send_file, url_for
 
 # User routes
 @app.route('/', methods=['GET'])
@@ -38,7 +38,7 @@ def workshop_old_displaying(workshop_name):
 
 @app.route('/workshop', methods=['GET'])
 def workshop():
-    return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1]), 301
+    return redirect(url_for('workshop_old_displaying', workshop_name=old_workshops[len(old_workshops) - 1]))
 
 @app.route('/workshop/hack<int:num>', methods=['GET'])
 def hack(num):
