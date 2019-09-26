@@ -22,11 +22,7 @@ def sponsors():
 def joinslack():
     return redirect("https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY", code=302)
 
-@app.route('/workshop', methods=['GET'])
-def workshop():
-    return render_template('workshop1.html')
-
-old_workshops = ['workshop1.html']
+old_workshops = ['workshop1']
 short_links = ['https://hackclub.com/workshops/personal_website#part-iii-the-css-file','https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules']
 
 @app.route('/workshop/old', methods=['GET'])
@@ -37,8 +33,12 @@ def workshop_old():
 def workshop_old_displaying(workshop_name):
     for items in old_workshops:
         if workshop_name == items:
-            return render_template(items)
+            return render_template(items + '.html')
     return 'Archived workshop doesn\'t exsist'
+
+@app.route('/workshop', methods=['GET'])
+def workshop():
+    return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1])
 
 @app.route('/workshop/hack<int:num>', methods=['GET'])
 def hack(num):
