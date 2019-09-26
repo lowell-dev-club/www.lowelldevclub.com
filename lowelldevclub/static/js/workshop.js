@@ -33,7 +33,7 @@ $(function(){
 		resetCallback: function() {}
 	});
 });
-$(function(){$(".flask").typed({strings: ["Full Stack Web Devlopment"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
+$(function(){$(".flask").typed({strings: ["Full Stack Web Development"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 
 /*
 	This is the type script for the club description in the about page

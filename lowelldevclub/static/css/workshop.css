@@ -3,11 +3,11 @@
   color: black;
 }
 
-.links-workshop {
+.links-workshop, .links-workshop:visited {
   color; #424242;
   text-decoration: none;
 }
-.links-workshop:hover {
+.links-workshop:hover, .links-workshop:visited:hover {
   color; #575757;
 }
 
