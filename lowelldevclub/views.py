@@ -40,10 +40,6 @@ def workshop_old_displaying(workshop_name):
 def workshop():
     return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1]), 301
 
-@app.route('/$', methods=['GET'])
-def workshopfix():
-    return redirect('/workshop/old/' + old_workshops[len(old_workshops) - 1]), 301
-
 @app.route('/workshop/hack<int:num>', methods=['GET'])
 def hack(num):
     if num - 1 > len(short_links) or num <= 0:
