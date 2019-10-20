@@ -1,21 +1,24 @@
-/* ---- reset ---- */
-
 html {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
-html, body
-{
+
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Titillium Web';font-size: 17px;
+  font-family: 'Titillium Web';
+  font-size: 17px;
 }
-*,*:before,*:after {
-  box-sizing:inherit
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit
 }
 
 body {
   margin: 0;
-  font:normal 85% Arial, Helvetica, sans-serif;
+  font: normal 85% Arial, Helvetica, sans-serif;
 }
 
 canvas {
@@ -24,7 +27,6 @@ canvas {
 }
 
 /* ---- particles.js container ---- */
-
 #particles-js {
   position: absolute;
   width: 100%;
@@ -48,18 +50,31 @@ canvas {
   color: white;
   font-size: 40px;
 }
+
 .center p {
   text-align: center;
   font-size: 15px;
 }
 
-.mobile-title {display:none;}
-.desktop-title {display:block;}
-
-@media (max-width : 320px) {
-    .mobile-title {display:block;}
-    .desktop-title {display:none;}
+.mobile-title {
+  display: none;
 }
+
+.desktop-title {
+  display: block;
+}
+
+@media (max-width:320px) {
+  .mobile-title {
+    display: block;
+  }
+
+  .desktop-title {
+    display: none;
+  }
+
+}
+
 /* ---- css to fade in the home page ---- */
 .fade-in {
   animation: fadeIn ease 5s;
@@ -69,66 +84,72 @@ canvas {
   -ms-animation: fadeIn ease 5s;
 }
 
-
-@keyframes fadeIn{
+@keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
+
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
+
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
+
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
+
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
+
 }
 
 /* ---- css to float the title ----*/
 .float-up {
-  position: relative;
-  /* Safari 4.0 - 8.0 */
+  position: relative;  /* Safari 4.0 - 8.0 */
   -webkit-animation-name: float-up;
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 1s;
-  -webkit-animation-fill-mode: both;
-  /* Standard syntax */
+  -webkit-animation-fill-mode: both;  /* Standard syntax */
   animation-name: float-up;
   animation-duration: 5s;
   animation-delay: 1s;
-  animation-fill-mode: both;
-  /* IE 9 */
+  animation-fill-mode: both;  /* IE 9 */
   -ms-transform-name: float-up;
   -ms-transform-duration: 5s;
   -ms-transform-delay: 1s;
@@ -138,18 +159,15 @@ canvas {
 }
 
 .float-up-subtitle {
-  position: relative;
-  /* Safari 4.0 - 8.0 */
+  position: relative;  /* Safari 4.0 - 8.0 */
   -webkit-animation-name: float-up;
   -webkit-animation-duration: 5s;
   -webkit-animation-delay: 2s;
-  -webkit-animation-fill-mode: both;
-  /* Standard syntax */
+  -webkit-animation-fill-mode: both;  /* Standard syntax */
   animation-name: float-up;
   animation-duration: 5s;
   animation-delay: 2s;
-  animation-fill-mode: both;
-  /* IE 9 */
+  animation-fill-mode: both;  /* IE 9 */
   -ms-transform-name: float-up;
   -ms-transform-duration: 5s;
   -ms-transform-delay: 2s;
@@ -160,22 +178,49 @@ canvas {
   text-decoration: none;
   color: white;
 }
+
 .workshop:hover {
   color: #ddd;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes float-up {
-  0% {top: 0px; opacity: 0;}
-  100% {top: -50px; opacity: 1;}
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+
 }
+
 /* Standard */
 @keyframes float-up {
-  0% {top: 0px; opacity: 0;}
-  100% {top: -50px; opacity: 1;}
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+
 }
+
 /* IE 9 */
 @-ms-keyframes float-up {
-  0% {top: 0px; opacity: 0;}
-  100% {top: -50px; opacity: 1;}
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+
 }
