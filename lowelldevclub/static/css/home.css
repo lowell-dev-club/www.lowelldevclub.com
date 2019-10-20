@@ -95,40 +95,7 @@ canvas {
 
 }
 
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
-@-ms-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -212,15 +179,3 @@ canvas {
 }
 
 /* IE 9 */
-@-ms-keyframes float-up {
-  0% {
-    top: 0px;
-    opacity: 0;
-  }
-
-  100% {
-    top: -50px;
-    opacity: 1;
-  }
-
-}
