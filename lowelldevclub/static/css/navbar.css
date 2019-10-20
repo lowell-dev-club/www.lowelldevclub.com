@@ -6,13 +6,16 @@
   width: 100%;
   z-index: 1;
 }
+
 .navbar-text {
   color: #FFF !important;
   margin: auto;
 }
+
 .navbar-right {
-  float:right;
+  float: right;
 }
+
 .navbar a {
   font-weight: bold;
   margin-right: 10px;
@@ -21,15 +24,19 @@
   text-decoration: none;
   color: #000;
 }
+
 #test {
   float: left;
 }
+
 .navbar img {
   max-width: 100px;
   max-height: 36px;
   margin: -10px;
   float: left;
 }
-button:hover, a:hover {
+
+button:hover,
+a:hover {
   opacity: 0.7;
 }
