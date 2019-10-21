@@ -21,16 +21,131 @@ canvas {
 	vertical-align: bottom
 }
 
-#particles-js {
-	position: fixed;
-	width: 99%;
-	height: 99%;
-	background-color: rgba(255, 255, 255, 0);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c0170', endColorstr='#16350e', GradientType=0);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 50%;
-	z-index: -1 !important
+@media (min-width:901px) {
+	#particles-js {
+		position: fixed;
+		width: 99%;
+		height: 99%;
+		background-color: rgba(255, 255, 255, 0);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c0170', endColorstr='#16350e', GradientType=0);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+		z-index: -1 !important
+	}
+
+}
+
+@media (max-width:900px) {
+	.colorchanger {
+		-webkit-animation: rainbow 15s infinite;
+		animation: rainbow 15s infinite;
+	}
+
+}
+
+@-webkit-keyframes rainbow {
+	100%,
+	0% {
+		color: rgb(255, 0, 0);
+	}
+
+	8% {
+		color: rgb(255, 127, 0);
+	}
+
+	16% {
+		color: rgb(255, 255, 0);
+	}
+
+	25% {
+		color: rgb(127, 255, 0);
+	}
+
+	33% {
+		color: rgb(0, 255, 0);
+	}
+
+	41% {
+		color: rgb(0, 255, 127);
+	}
+
+	50% {
+		color: rgb(0, 255, 255);
+	}
+
+	58% {
+		color: rgb(0, 127, 255);
+	}
+
+	66% {
+		color: rgb(0, 0, 255);
+	}
+
+	75% {
+		color: rgb(127, 0, 255);
+	}
+
+	83% {
+		color: rgb(255, 0, 255);
+	}
+
+	91% {
+		color: rgb(255, 0, 127);
+	}
+
+}
+
+@keyframes rainbow {
+	100%,
+	0% {
+		color: rgb(255, 0, 0);
+	}
+
+	8% {
+		color: rgb(255, 127, 0);
+	}
+
+	16% {
+		color: rgb(255, 255, 0);
+	}
+
+	25% {
+		color: rgb(127, 255, 0);
+	}
+
+	33% {
+		color: rgb(0, 255, 0);
+	}
+
+	41% {
+		color: rgb(0, 255, 127);
+	}
+
+	50% {
+		color: rgb(0, 255, 255);
+	}
+
+	58% {
+		color: rgb(0, 127, 255);
+	}
+
+	66% {
+		color: rgb(0, 0, 255);
+	}
+
+	75% {
+		color: rgb(127, 0, 255);
+	}
+
+	83% {
+		color: rgb(255, 0, 255);
+	}
+
+	91% {
+		color: rgb(255, 0, 127);
+	}
+
 }
 
 body {
