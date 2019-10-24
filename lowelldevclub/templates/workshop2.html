@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Lowell Dev Club About
+Lowell Dev Club Workshop 2
 {% endblock %}
 
 {% block head_css %}
-  <link rel="stylesheet" href="static/css/navbar.min.css">
-  <link rel="stylesheet" href="static/css/footer.min.css">
-  <link rel="stylesheet" href="static/css/about.min.css">
-  <link rel="stylesheet" href="static/css/workshop.min.css">
+  <link rel="stylesheet" href="../../static/css/navbar.min.css">
+  <link rel="stylesheet" href="../../static/css/footer.min.css">
+  <link rel="stylesheet" href="../../static/css/about.min.css">
+  <link rel="stylesheet" href="../../static/css/workshop.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
@@ -23,7 +23,7 @@ Lowell Dev Club About
 
   <div class="body-particles">
     <nav class="navbar">
-    <a href="/" class="navbar-text" id="test"><img src="static/img/logo-transparent.png"></a>
+    <a href="/" class="navbar-text" id="test"><img src="../../static/img/logo-transparent.png"></a>
       <div class="navbar-right">
         <a href="/workshop/old" class="navbar-text">Workshop</a>
         <a href="/about" class="navbar-text">About</a>
@@ -34,10 +34,17 @@ Lowell Dev Club About
     </nav>
     <div class="container rounded">
       <div class="typed_wrap">
-        <u><h1><span class="construction"></span></h1></u>
+        <u><h1><span class="text-based"></span></h1></u>
       </div>
-      <div class="typed_wrap">
-        <h2><a href="https://github.com/lowell-dev-club" class="plz"><span class="message" id="message"></span></a></h2>
+      <div class="typed_wrap"><h2><a href="https://repl.it/signup" class="links-workshop"><span class="link1" id="link1"></span></a></h2></div>
+      <div class="typed_wrap"><h2><a href="/workshop/hack3" class="links-workshop"><span class="link3" id="link3"></span></a></h2></div>
+      <br>
+      <div class="about_paragraph fade-about-paragraph">
+        <p><a class="plz links-for-workshop" href="#no_slides">Workshop Slides</a></p>
+        <br>
+        <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/python-text-game">Workshop Code</a></p>
+        <br>
+        <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/www.lowelldev.club/blob/production/lowelldevclub/templates/workshop2.html">Source Code</a></p>
       </div>
     </div>
   </div>
@@ -47,6 +54,6 @@ Lowell Dev Club About
 {% endblock %}
 
 {% block trailing_js %}
-<script type="text/javascript" src="static/js/home.js"></script>
-<script type="text/javascript" src="static/js/workshop.js"></script>
+<script type="text/javascript" src="../../static/js/home.js"></script>
+<script type="text/javascript" src="../../static/js/workshop.js"></script>
 {% endblock %}
