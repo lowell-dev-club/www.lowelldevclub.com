@@ -5,15 +5,13 @@
 
 .links-workshop,
 .links-workshop:visited {
-  color;
-  #424242;
+  color: #424242;
   text-decoration: none;
 }
 
 .links-workshop:hover,
 .links-workshop:visited:hover {
-  color;
-  #575757;
+  color: #575757;
 }
 
 .links-for-workshop {
