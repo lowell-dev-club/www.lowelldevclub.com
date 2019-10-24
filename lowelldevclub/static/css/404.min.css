@@ -1,0 +1,19 @@
+#tag,p{color:#fff;font-family:Muli,sans-serif}
+#spacer{padding:2px}
+p{font-size:200px;margin-left:36%;margin-top:15%;position:absolute;z-index:1!important}
+canvas{display:block;vertical-align:bottom}
+#particles-js{position:fixed;width:99%;height:99%;background-color:rgba(255,255,255,0);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c0170',endColorstr='#16350e',GradientType=0);background-repeat:no-repeat;background-size:cover;background-position:50% 50%;z-index:-1!important}
+body{background-color:#000}
+#tag{font-size:40px;margin-top:-13%;margin-left:35%}
+@media only screen and (max-width:530px){
+	p{font-size:30px;margin-left:35%}
+	#tag{font-size:20px;margin-top:-5%;margin-left:15%}
+}
+@media only screen and (min-width:531px) and (max-width:580px){
+	p{font-size:50px;margin-left:30%}
+	#tag{font-size:25px;margin-top:-10%;margin-left:15%}
+}
+@media only screen and (min-width:581px) and (max-width:850px){
+	p{font-size:100px;margin-left:38%;margin-top:12%}
+	#tag{font-size:40px;margin-top:-15%;margin-left:23%}
+}
