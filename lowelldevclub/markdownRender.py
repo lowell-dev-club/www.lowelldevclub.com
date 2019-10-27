@@ -21,17 +21,13 @@ Lowell Dev Club Workshop 2
 {% block head_css %}
   <link rel="stylesheet" href="../../static/css/navbar.min.css">
   <link rel="stylesheet" href="../../static/css/footer.min.css">
+  <link rel="stylesheet" href="../../static/css/markdown.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
 
-{% block head_js %}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-{% endblock %}
-
 {% block content %}
-
-  <div class="body-particles">
+  <div class="body-wrapper">
     <nav class="navbar">
     <a href="/" class="navbar-text" id="test"><img src="../../static/img/logo-transparent.png"></a>
       <div class="navbar-right">
@@ -54,7 +50,7 @@ for count in range(len(markdownLines)):
 f.write('''
     </div>
   </div>
-  <div id="particles-js"></div>
+  </div>
   {% endblock %}
 
 {% block trailing_js %}
