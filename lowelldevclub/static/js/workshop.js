@@ -35,6 +35,7 @@ $(function(){
 });
 $(function(){$(".flask").typed({strings: ["Full Stack Web Development"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 $(function(){$(".text-based").typed({strings: ["Python Text Based Game"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
+$(function(){$(".emailer").typed({strings: ["Python Emailer"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 
 /*
 	This is the type script for the club description in the about page
@@ -79,3 +80,8 @@ var delayInMilliseconds4 = 3000
 var txt4 = "2. https://lowelldev.club/workshop/hack3";
 setTimeout(function() {if (i4 < txt4.length) {document.getElementById("link4").innerHTML += txt4.charAt(i4);i4++;setTimeout(typeWriter4, speed);}}, delayInMilliseconds4);
 function typeWriter4() {if (i4 < txt4.length) {document.getElementById("link4").innerHTML += txt4.charAt(i4);i4++;setTimeout(typeWriter4, speed);}}
+var i5 = 0;
+var delayInMilliseconds5 = 3000
+var txt5 = "2. https://lowelldev.club/workshop/hack4";
+setTimeout(function() {if (i5 < txt5.length) {document.getElementById("link5").innerHTML += txt5.charAt(i5);i5++;setTimeout(typeWriter5, speed);}}, delayInMilliseconds5);
+function typeWriter5() {if (i5 < txt5.length) {document.getElementById("link5").innerHTML += txt5.charAt(i5);i5++;setTimeout(typeWriter5, speed);}}
