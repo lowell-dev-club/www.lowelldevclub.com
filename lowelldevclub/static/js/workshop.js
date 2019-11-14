@@ -36,6 +36,7 @@ $(function(){
 $(function(){$(".flask").typed({strings: ["Full Stack Web Development"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 $(function(){$(".text-based").typed({strings: ["Python Text Based Game"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 $(function(){$(".emailer").typed({strings: ["Python Emailer"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
+$(function(){$(".youtube").typed({strings: ["Python Youtube Webscraper"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 
 /*
 	This is the type script for the club description in the about page
@@ -85,3 +86,8 @@ var delayInMilliseconds5 = 3000
 var txt5 = "2. https://lowelldev.club/workshop/hack4";
 setTimeout(function() {if (i5 < txt5.length) {document.getElementById("link5").innerHTML += txt5.charAt(i5);i5++;setTimeout(typeWriter5, speed);}}, delayInMilliseconds5);
 function typeWriter5() {if (i5 < txt5.length) {document.getElementById("link5").innerHTML += txt5.charAt(i5);i5++;setTimeout(typeWriter5, speed);}}
+var i6 = 0;
+var delayInMilliseconds6 = 3000
+var txt6 = "2. https://lowelldev.club/workshop/hack5";
+setTimeout(function() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}, delayInMilliseconds6);
+function typeWriter5() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}
