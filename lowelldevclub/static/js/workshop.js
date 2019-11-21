@@ -90,4 +90,4 @@ var i6 = 0;
 var delayInMilliseconds6 = 3000
 var txt6 = "2. https://lowelldev.club/workshop/hack5";
 setTimeout(function() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}, delayInMilliseconds6);
-function typeWriter5() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}
+function typeWriter6() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}
