@@ -22,12 +22,13 @@ def sponsors():
 def joinslack():
     return redirect("https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY", code=302)
 
-old_workshops = ['workshop1','workshop2','workshop3','workshop4']
+old_workshops = ['workshop1','workshop2','workshop3','workshop4', 'workshop5']
 short_links = ['https://hackclub.com/workshops/personal_website#part-iii-the-css-file',
                'https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules',
                'https://github.com/lowell-dev-club/python-text-game/blob/master/workshop.md',
                'https://github.com/lowell-dev-club/python-emailer/blob/master/workshop.md',
-               'https://github.com/lowell-dev-club/youtube-scraper/blob/master/README.md']
+               'https://github.com/lowell-dev-club/youtube-scraper/blob/master/README.md',
+               'https://github.com/lowell-dev-club/flask-workshop-2.0']
 
 @app.route('/workshop/old', methods=['GET'])
 def workshop_old():
