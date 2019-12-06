@@ -28,7 +28,7 @@ short_links = ['https://hackclub.com/workshops/personal_website#part-iii-the-css
                'https://github.com/lowell-dev-club/python-text-game/blob/master/workshop.md',
                'https://github.com/lowell-dev-club/python-emailer/blob/master/workshop.md',
                'https://github.com/lowell-dev-club/youtube-scraper/blob/master/README.md',
-               'https://github.com/lowell-dev-club/flask-workshop-2.0']
+               'https://github.com/lowell-dev-club/flask-workshop-2.0/blob/master/README.md']
 
 @app.route('/workshop/old', methods=['GET'])
 def workshop_old():
