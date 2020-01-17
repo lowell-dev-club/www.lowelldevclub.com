@@ -13,6 +13,7 @@ mistune==0.8.4
 more-itertools==7.0.0
 pluggy==0.9.0
 py==1.8.0
+PyStarter==1.4.0
 pytest==4.4.0
 requests==2.22.0
 six==1.12.0
