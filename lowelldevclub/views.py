@@ -74,6 +74,9 @@ def hack(num):
 def latin():
     form = forms.LatinForm()
     if request.method == 'POST':
+        link = 'https://en.m.wiktionary.org/wiki/' + str(form.word) + '#Latin'
+    link = None
+    return render_template('latin.html', form=form, link=link)
 
 
 # SEO
