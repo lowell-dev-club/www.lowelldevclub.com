@@ -1,4 +1,4 @@
-from lowelldevclub import app
+from lowelldevclub import app, forms
 from flask import render_template, request, make_response, redirect, send_file, url_for
 
 # User routes
@@ -68,6 +68,13 @@ def hack(num):
     if num - 1 > len(short_links) or num <= 0:
         return 'Short link doesn\'t exsist'
     return redirect(short_links[num - 1])
+
+
+@app.route('/latin/', methods=['GET', 'POST'])
+def latin():
+    form = forms.LatinForm()
+    if request.method == 'POST':
+
 
 # SEO
 @app.route('/robots.txt', methods=['GET'])
