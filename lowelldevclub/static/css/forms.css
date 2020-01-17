@@ -1,0 +1,31 @@
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 4px solid rgb(125, 125, 125);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 4px solid rgb(150, 240, 150);
+}
+
+label {
+  margin-top: 7px;
+}
+
+#submit {
+  background-color: rgb(145, 250, 145);
+  border: none;
+  color: rgb(20, 25, 20);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
