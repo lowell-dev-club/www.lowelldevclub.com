@@ -73,9 +73,9 @@ def hack(num):
 @app.route('/latin/', methods=['GET', 'POST'])
 def latin():
     form = forms.LatinForm()
+    link = None
     if request.method == 'POST':
         link = 'https://en.m.wiktionary.org/wiki/' + str(form.word) + '#Latin'
-    link = None
     return render_template('latin.html', form=form, link=link)
 
 
