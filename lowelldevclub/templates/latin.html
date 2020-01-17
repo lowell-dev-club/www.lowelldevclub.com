@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Title -->
+  <title>Latin</title>
+
+  <!-- CSS -->
+  <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/forms.css') }}">
+</head>
+<body>
+
+{% block content %}
+<div class="body-wrapper">
+<h1 class="center-align">Latin word searcher</h1>
+<form autocomplete="off" action="" method="POST">
+  <p>
+    {{ form.word }}<br>
+    {{ form.word.label }}
+  </p>
+  <p>{{ form.submit() }}</p>
+</form>
+</div>
+{{ if link is not None }}
+<p>Here is the link: <a href="{{ link }}">{{ link }}</a></p>
+{{ endif }}
+
+</body>
+</html>
