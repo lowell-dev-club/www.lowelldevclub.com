@@ -9,20 +9,21 @@
 </head>
 <body>
 
-{% block content %}
 <div class="body-wrapper">
 <h1 class="center-align">Latin word searcher</h1>
 <form autocomplete="off" action="" method="POST">
   <p>
     {{ form.word }}<br>
-    {{ form.word.label }}
   </p>
   <p>{{ form.submit() }}</p>
 </form>
+<br>
+{% if form.link != None %}
+<p>Here is the link: <a target="_blank" href="{{ form.link }}">{{ form.link }}</a></p>
+{% endif %}
+<br>
 </div>
-{{ if link is not None }}
-<p>Here is the link: <a href="{{ link }}">{{ link }}</a></p>
-{{ endif }}
+
 
 </body>
 </html>
