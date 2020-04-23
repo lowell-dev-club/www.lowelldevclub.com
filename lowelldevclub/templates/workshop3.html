@@ -5,56 +5,44 @@ Lowell Dev Club Workshop 3
 {% endblock %}
 
 {% block head_css %}
-  <link rel="stylesheet" href="../../static/css/navbar.min.css">
-  <link rel="stylesheet" href="../../static/css/footer.min.css">
-  <link rel="stylesheet" href="../../static/css/about.min.css">
-  <link rel="stylesheet" href="../../static/css/workshop.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/about.min.css">
+    <link rel="stylesheet" href="../../static/css/workshop.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 {% endblock %}
 
 {% block head_js %}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 {% endblock %}
 
 {% block content %}
 
-  <div class="body-particles">
-    <nav class="navbar">
-    <a href="/" class="navbar-text" id="test"><img src="../../static/img/logo-transparent.png"></a>
-      <div class="navbar-right">
-        <a href="/workshop/old" class="navbar-text">Workshop</a>
-        <a href="/about" class="navbar-text">About</a>
-        <a href="/partners" class="navbar-text">Partners</a>
-        <a href="https://bank.hackclub.com/donations/start/dev-club" class="navbar-text">Donate!</a>
-        <!--<a href="/sponsors" class="navbar-text">Sponsors</a>-->
-      </div>
-      <div style="clear:both"></div>
-    </nav>
-    <div class="container rounded">
-      <div class="typed_wrap">
-        <u><h1><span class="emailer"></span></h1></u>
-      </div>
-      <div class="typed_wrap"><h2><a href="https://repl.it/signup" class="links-workshop"><span class="link1" id="link1"></span></a></h2></div>
-      <div class="typed_wrap"><h2><a href="/workshop/hack4" class="links-workshop"><span class="link5" id="link5"></span></a></h2></div>
-      <br>
-      <div class="about_paragraph fade-about-paragraph">
-        <p><a class="plz links-for-workshop" href="#no_slides">Workshop Slides</a></p>
-        <br>
-        <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/python-emailer/">Workshop Code</a></p>
-        <br>
-        <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/www.lowelldev.club/blob/production/lowelldevclub/templates/workshop3.html">Source Code</a></p>
-      </div>
+    <div class="body-particles">
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <div class="typed_wrap">
+                <u><h1><span class="emailer"></span></h1></u>
+            </div>
+            <div class="typed_wrap"><h2><a href="https://repl.it/signup" class="links-workshop"><span class="link1" id="link1"></span></a></h2></div>
+            <div class="typed_wrap"><h2><a href="/workshop/hack4" class="links-workshop"><span class="link5" id="link5"></span></a></h2></div>
+            <br>
+            <div class="about_paragraph fade-about-paragraph">
+                <p><a class="plz links-for-workshop" href="#no_slides">Workshop Slides</a></p>
+                <br>
+                <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/python-emailer/">Workshop Code</a></p>
+                <br>
+                <p><a class="plz links-for-workshop" href="https://github.com/lowell-dev-club/www.lowelldev.club/blob/production/lowelldevclub/templates/workshop3.html">Source Code</a></p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div id="particles-js"></div>
+    <div id="particles-js"></div>
 
 {% endblock %}
 
 {% block trailing_js %}
-<script type="text/javascript" src="../../static/js/home.js"></script>
-<script type="text/javascript" src="../../static/js/workshop.js"></script>
+    <script type="text/javascript" src="../../static/js/home.js"></script>
+    <script type="text/javascript" src="../../static/js/workshop.js"></script>
 {% endblock %}
