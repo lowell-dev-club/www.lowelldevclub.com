@@ -17,11 +17,6 @@ def partners():
     return render_template('partners.html')
 
 
-'''
-@app.route('/sponsors', methods=['GET'])
-def sponsors():
-    return render_template('sponsors.html')
-'''
 @app.route('/joinslack', methods=['GET'])
 def joinslack():
     return redirect(
@@ -90,6 +85,7 @@ def sitemap():
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
     return response
+
 
 # Error handelers
 @app.errorhandler(404)
