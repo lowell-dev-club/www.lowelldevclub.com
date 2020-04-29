@@ -37,6 +37,7 @@ $(function(){$(".flask").typed({strings: ["Full Stack Web Development"],stringsE
 $(function(){$(".text-based").typed({strings: ["Python Text Based Game"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 $(function(){$(".emailer").typed({strings: ["Python Emailer"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 $(function(){$(".youtube").typed({strings: ["Python Youtube Webscraper"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
+$(function(){$(".youtube").typed({strings: ["Python Flask Website created virtually and live via zoom"],stringsElement: null,typeSpeed: 0,startDelay: 0,backSpeed: 20,backDelay: 500,loop: false,loopCount: false,showCursor: false,cursorChar: "|",attr: null,contentType: 'html',callback: function() {},preStringTyped: function() {},onStringTyped: function() {},resetCallback: function() {}});});
 
 /*
 	This is the type script for the club description in the about page
@@ -92,7 +93,7 @@ var txt6 = "2. https://lowelldev.club/workshop/hack5";
 setTimeout(function() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}, delayInMilliseconds6);
 function typeWriter6() {if (i6 < txt6.length) {document.getElementById("link6").innerHTML += txt6.charAt(i6);i6++;setTimeout(typeWriter6, speed);}}
 var i7 = 0;
-var delayInMilliseconds7 = 3000
-var txt7 = "2. https://lowelldev.club/workshop/hack5";
+var delayInMilliseconds7 = 5000
+var txt7 = "1. https://lowelldev.club/workshop/hack6";
 setTimeout(function() {if (i7 < txt7.length) {document.getElementById("link7").innerHTML += txt7.charAt(i7);i7++;setTimeout(typeWriter7, speed);}}, delayInMilliseconds7);
 function typeWriter7() {if (i7 < txt7.length) {document.getElementById("link7").innerHTML += txt7.charAt(i7);i7++;setTimeout(typeWriter7, speed);}}
