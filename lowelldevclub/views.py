@@ -29,8 +29,7 @@ old_workshops = [
     'workshop2',
     'workshop3',
     'workshop4',
-    'workshop5',
-    'workshop6']
+    'workshop5']
 short_links = [
     'https://hackclub.com/workshops/personal_website#part-iii-the-css-file',
     'https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules',
