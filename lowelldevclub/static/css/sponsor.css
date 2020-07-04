@@ -47,19 +47,21 @@ canvas {
 }
 
 .row {
-  width: 100%;
-  height: auto;  /*max-height: 550px;*/
-  padding: none;
-  margin: auto;
-  position: relative;  /*opacity: 0;*/
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 2rem 0px;
+}
+
+.sponsor {
+  display: block;
+  width: 20rem;
+  height: 100%;
+  padding: 1rem;
 }
 
 .row img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 250px;
-  max-height: 250px;
+  width: 100%;
 }
 
 /* ---- particles.js container ---- */
