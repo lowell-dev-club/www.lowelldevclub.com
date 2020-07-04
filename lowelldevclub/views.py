@@ -17,6 +17,11 @@ def partners():
     return render_template('partners.html')
 
 
+@app.route('/donate', methods=['GET'])
+def donate():
+    return render_template('donate.html')
+
+
 @app.route('/joinslack', methods=['GET'])
 def joinslack():
     return redirect(
