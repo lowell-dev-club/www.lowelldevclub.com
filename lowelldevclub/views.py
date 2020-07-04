@@ -1,6 +1,7 @@
 from lowelldevclub import app, forms
 from flask import render_template, request, make_response, redirect, send_file, url_for
 
+
 # User routes
 @app.route('/', methods=['GET'])
 def home():
@@ -74,7 +75,8 @@ def hack(num):
 def latin():
     form = forms.LatinForm()
     if request.method == 'POST':
-        form.link = 'https://en.m.wiktionary.org/wiki/' + str(form.word.data) + '#Latin'
+        form.link = 'https://en.m.wiktionary.org/wiki/' + \
+            str(form.word.data) + '#Latin'
     return render_template('latin.html', form=form)
 
 
