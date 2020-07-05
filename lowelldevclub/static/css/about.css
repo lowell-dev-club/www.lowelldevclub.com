@@ -32,13 +32,17 @@ h3 {
 }
 
 .container {
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin: 50px auto 10px auto;
   width: 75%;
   background: #E5F3FF;
   padding: 25px;
-  background: #E5F3FF;
+}
+
+@media (max-width:400px){
+  .container {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 .rounded {
@@ -47,24 +51,9 @@ h3 {
   border-color: #E5F3FF;
 }
 
-.row {
-  width: 80%;
-  height: auto;
-  padding: 0;
-  margin: auto;
-  position: relative;
-}
-
 .profile-card-container {
   opacity: 0;
   height: 0px;
-}
-
-.col {
-
-  /*width:33%;*/
-  float: left;
-  margin: auto;  /*min-width: 482px; */
 }
 
 .card {
@@ -125,10 +114,6 @@ h3 {
   opacity: 0.7;
 }
 
-.social-media {
-  color: #000;
-}
-
 .card button {
   border: none;
   border-radius: 5px;
@@ -156,35 +141,30 @@ img {
   border-radius: 15px;
 }
 
-@media (min-width:1180px) {
-  .col.float-left {
-    float: left;
-  }
-
+.col {
+  margin: auto;
+  width: 100%;
+  display: block;
 }
 
-@media (min-width:1180px) {
-  .col.full {
-    width: 99.9999%;
-  }
-
+.row {
+  margin: auto;
 }
 
-@media (min-width:1181px) {
-  .col.third {
-    width: 33.3333%;
+@media (min-width:1300px){
+  .row {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 0px;
   }
-
   .col {
-    width: 500px;
+    width: 33.333%;
   }
-
 }
 
 .social-media {
-
-  /*background: #3B5998;*/
-  color: rgb(221, 55, 55);
+  color: #000;
   text-align: center;
   text-decoration: none;
 }
