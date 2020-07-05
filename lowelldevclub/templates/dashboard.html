@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Leader Dashboard{% endblock %}
+
+{% block head_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="body-particles">
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <h1 class="partners-title"><u>Dashboard</u></h1>
+            <br>
+            <h3>Workshops <a href="{{ url_for('createWorkshop') }}">Create</a></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Times Viewed</td>
+                        <td>View</td>
+                        <td>Edit</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workshop in workshops %}
+                    <tr>
+                        <td>{{ workshop.name }}</td>
+                        <td>{{ workshop.timesviewed }}</td>
+                        <td><a href="{{ url_for('workshop', url=workshop.url) }}">/workshop/{{ workshop.url }}</a></td>
+                        <td><a href="{{ url_for('editWorkshop', id=workshop.id) }}">Edit</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <h3>Short Links <a href="{{ url_for('createLink') }}">Create</a></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Times Used</td>
+                        <td>Long Link</td>
+                        <td>Edit</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for link in links %}
+                    <tr>
+                        <td><a href="{{ url_for('shortInfo', num=link.id) }}">/short{{ link.id }}</a></td>
+                        <td>{{ link.timesused }}</td>
+                        <td><a href="{{ link.link }}">{{ link.link }}</a></td>
+                        <td><a href="{{ url_for('editLink', id=link.id) }}">Edit</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <h3>Users <a href="{{ url_for('userCreation') }}">Create</a></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Email</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.email }}</td>
+                        <td>{% if current_user.id == user.id %}<a href="{{ url_for('deleteUser', id=user.id) }}">Delete</a>{% else %}Can't Delete{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
