@@ -12,6 +12,7 @@
 <div class="body-wrapper">
 <h1 class="center-align">Latin word searcher</h1>
 <form autocomplete="off" action="" method="POST">
+    {{ form.hidden_tag() }}
   <p>
     {{ form.word }}<br>
   </p>
