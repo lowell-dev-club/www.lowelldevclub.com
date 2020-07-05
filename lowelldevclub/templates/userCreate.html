@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Create User{% endblock %}
+
+{% block head_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="body-particles">
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <form method="POST" action="">
+                <!-- Part of protecting the site from attacks -->
+                {{ form.hidden_tag() }}
+                <h2 class="form-title">Create User</h2>
+                <div class="form-group">
+                {{ form.email.label(class="form-label-css") }}
+                <br>
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                {{ form.password.label(class="form-label-css") }}
+                <br>
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
