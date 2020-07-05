@@ -16,7 +16,8 @@
   float: right;
 }
 
-.navbar a {
+.navbar a,
+.navbar a:visited {
   font-weight: bold;
   margin-right: 10px;
   margin-left: 10px;
@@ -36,7 +37,9 @@
   float: left;
 }
 
-button:hover,
-a:hover {
-  opacity: 0.7;
+@media (min-width:800px){
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
 }
