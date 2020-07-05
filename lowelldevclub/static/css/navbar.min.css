@@ -1,9 +1,13 @@
 /* ---- navbar ---- */
 .navbar{padding:15px;position:fixed;top:0;width:100%;z-index:1;}
-.navbar-text{color:#000!important;margin:auto;}
+.navbar-text{color:#fff!important;margin:auto;}
 .navbar-right{float:right;}
+@media (max-width:500px){
+    .navbar-right{margin-top:15px;}
+    .navbar{padding:15px 0;}
+}
 .navbar a,
-.navbar a:visited{font-weight:bold;margin-right:10px;margin-left:10px;font:10px;text-decoration:none;color:#000;}
+.navbar a:visited{font-weight:bold;margin-right:10px;margin-left:10px;font:10px;text-decoration:none;color:#fff;}
 #test{float:left;}
 .navbar img{max-width:100px;max-height:36px;margin:-10px;float:left;}
 @media (min-width:800px){

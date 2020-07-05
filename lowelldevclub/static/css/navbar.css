@@ -8,12 +8,21 @@
 }
 
 .navbar-text {
-  color: #000 !important;
+  color: #fff !important;
   margin: auto;
 }
 
 .navbar-right {
   float: right;
+}
+
+@media (max-width:500px){
+  .navbar-right {
+    margin-top: 15px;
+  }
+  .navbar {
+    padding: 15px 0;
+  }
 }
 
 .navbar a,
@@ -23,7 +32,7 @@
   margin-left: 10px;
   font: 10px;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 #test {
