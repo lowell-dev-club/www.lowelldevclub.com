@@ -2,8 +2,19 @@
 .navbar{padding:15px;position:fixed;top:0;width:100%;z-index:1;}
 .navbar-text{color:#000!important;margin:auto;}
 .navbar-right{float:right;}
-.navbar a{font-weight:bold;margin-right:10px;margin-left:10px;font:10px;text-decoration:none;color:#000;}
+.navbar a,
+.navbar a:visited{font-weight:bold;margin-right:10px;margin-left:10px;font:10px;text-decoration:none;color:#000;}
 #test{float:left;}
 .navbar img{max-width:100px;max-height:36px;margin:-10px;float:left;}
-button:hover,
-a:hover{opacity:0.7;}
+@media (min-width:800px){
+    button:hover,
+    a:hover{opacity:0.7;}
+}
+.alert{padding:20px;background-color:#f44336;color:white;opacity:1;transition:opacity 0.6s;margin-bottom:15px;}
+.alert.success{background-color:#4CAF50;}
+.alert.info{background-color:#2196F3;}
+.alert.warning{background-color:#ff9800;}
+.closebtn{margin-left:15px;color:white;font-weight:bold;float:right;font-size:22px;line-height:20px;cursor:pointer;transition-duration:0.4s;margin-top:-2px;}
+@media (min-width:850px){
+    .closebtn:hover{color:black;}
+}
