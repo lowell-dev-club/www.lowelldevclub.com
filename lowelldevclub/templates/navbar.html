@@ -1,7 +1,10 @@
 <nav class="navbar">
     <a href="{{ url_for('home')}}" class="navbar-text" id="test"><img src="{{ url_for('static', filename='img/logo-transparent.png') }}"></a>
     <div class="navbar-right">
-        <a href="/workshop/old" class="navbar-text">Workshop</a>
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('dashboard') }}" class="navbar-text">Leader</a>
+        {% endif %}
+        <a href="{{ url_for('workshopList') }}" class="navbar-text">Workshop</a>
         <a href="{{ url_for('about') }}" class="navbar-text">About</a>
         <a href="{{ url_for('partners') }}" class="navbar-text">Partners</a>
         <a href="{{ url_for('donate') }}" class="navbar-text">Donate!</a>
