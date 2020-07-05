@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}{% if edit %}Edit{% else %}Create{% endif %} Workshop{% endblock %}
+
+{% block head_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="body-particles">
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <form method="POST" action="">
+                <!-- Part of protecting the site from attacks -->
+                {{ form.hidden_tag() }}
+                <h2 class="form-title">{% if edit %}Edit{% else %}Create{% endif %} Workshop</h2>
+                {% if edit %}<p><a href="{{ url_for('deleteWorkshop', id=workshop.id) }}">Delete Workshop</a></p>{% endif %}
+                <div class="form-group">
+                {{ form.name.label(class="form-label-css") }}
+                <br>
+                {% if form.name.errors %}
+                    {{ form.name(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.name.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.name() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                {{ form.repo.label(class="form-label-css") }}
+                <br>
+                {% if form.repo.errors %}
+                    {{ form.repo(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.repo.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.repo() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                {{ form.markdown.label(class="form-label-css") }}
+                <br>
+                {% if form.markdown.errors %}
+                    {{ form.markdown(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.markdown.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.markdown() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                {{ form.url.label(class="form-label-css") }}
+                <br>
+                {% if form.url.errors %}
+                    {{ form.url(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.url.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.url() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                {{ form.text.label(class="form-label-css") }}
+                <br>
+                {% if form.text.errors %}
+                    {{ form.text(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.text.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.text() }}
+                {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
