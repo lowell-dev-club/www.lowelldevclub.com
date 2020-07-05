@@ -76,7 +76,7 @@ def shortInfo(num):
 def workshopRecent():
 
     workshops = Workshop.query.all()
-    workshops.sort(key=lambda workshop: workshop.created)
+    workshops.sort(key=lambda workshop: workshop.created, reverse=True)
 
     return redirect(url_for('workshop', url=workshops[0]))
 
@@ -85,7 +85,7 @@ def workshopRecent():
 def workshopList():
 
     workshops = Workshop.query.all()
-    workshops.sort(key=lambda workshop: workshop.created)
+    workshops.sort(key=lambda workshop: workshop.created, reverse=True)
 
     return render_template('workshopList.html', workshops=workshops)
 
