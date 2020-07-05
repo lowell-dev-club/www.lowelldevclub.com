@@ -1,5 +1,5 @@
 /* ---- css for the footer ---- */
-.footer{bottom:0px;padding:15px;position:fixed;width:100%;z-index:999;}
+.footer{bottom:0px;padding:15px;position:fixed;right:0;z-index:999;}
 .footer-right{float:right;}
 
 /* ---- css for social media icons ---- */
