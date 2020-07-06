@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}{% if edit %}Edit{% else %}Create{% endif %} Short Link{% endblock %}
+
+{% block head_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/leader.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="body-particles">
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <form method="POST" action="" autocomplete="off">
+                <!-- Part of protecting the site from attacks -->
+                {{ form.hidden_tag() }}
+                <h2 class="form-title">{% if edit %}Edit{% else %}Create{% endif %} Short Link</h2>
+                {% if edit %}
+                <p><a href="{{ url_for('deleteLink', id=link.id) }}">Delete Short Link</a></p>
+                {% endif %}
+                <div class="form-group">
+                {{ form.longurl.label(class="form-label-css") }}
+                <br>
+                {% if form.longurl.errors %}
+                    {{ form.longurl(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.longurl.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.longurl() }}
+                {% endif %}
+                </div>
+                {% if edit %}
+                <div class="form-group">
+                {{ form.clearCount.label(class="form-label-css") }}
+                <br>
+                {% if form.clearCount.errors %}
+                    {{ form.clearCount(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.clearCount.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.clearCount() }}
+                {% endif %}
+                </div>
+                {% endif %}
+                <br>
+                <div class="form-group">
+                    {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

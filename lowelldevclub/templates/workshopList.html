@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Workshops{% endblock %}
+
+{% block head_css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/workshop.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="body-particles">
+        
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <h1 class="partners-title"><u>Workshops</u></h1>
+            <h2><a href="{{ url_for('workshopRecent') }}" class="current">Current Workshop</a></h2>
+            {% for workshop in workshops %}
+            <div class="workshop">
+                <a href="{{ url_for('workshop', url=workshop.url) }}">
+                    <h3>{{ workshop.name }}</h3>
+                    <p>Created {{ workshop.created.strftime('%-m/%-d/%Y') }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

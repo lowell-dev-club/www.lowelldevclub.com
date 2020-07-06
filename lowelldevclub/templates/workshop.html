@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ workshop.name }}{% endblock %}
+
+{% block head_css %}
+{% if mdHtml %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/markdown.min.css') }}">
+{% endif %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/workshop.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+{% endblock %}
+
+{% block head_js %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="body-particles">
+        
+        {% include 'navbar.html' %}
+        <div class="container rounded">
+            <h1 class="partners-title"><u>{{ workshop.name }}</u></h1>
+            {% if current_user.is_authenticated %}
+            <div class="edit">
+                <p>Workshop viewed {{ workshop.timesviewed }} time{% if workshop.timesviewed > 1 %}s{% endif %}</p>
+                <p><a href="{{ url_for('editWorkshop', id=workshop.id) }}">Edit Workshop</a></p>
+            </div>
+            {% endif %}
+            <p><a class="back" href="{{ url_for('workshopList') }}">Back</a></p>
+            <p class="info">{{ workshop.text|safe }}</p>
+            {% if mdHtml %}
+            {{ mdHtml|safe }}
+            {% endif %}
+            {% if workshop.repoUrl %}
+            <div class="about_paragraph fade-about-paragraph">
+                <p><a rel="noopener" class="plz links-for-workshop" href="{{ workshop.repoUrl }}" target="_blank">Workshop Repo</a></p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    
+{% endblock %}
+
+{% block trailing_js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
