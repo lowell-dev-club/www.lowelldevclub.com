@@ -1,0 +1,17 @@
+.invalid-feedback{color:rgb(227,14,14);}
+.form-group{margin:20px;}
+input#remember{padding:10px;width:10px;height:10px;}
+.form-group input{background:none;border-color:#000;border-width:0 0 2px 0;font-size:15px;margin-top:5px;padding:3px;width:100%;max-width:25%;}
+.form-group textarea{background:none;border-color:#000;border-width:2px;font-size:15px;margin-top:5px;padding:3px;width:100%;max-width:25%;font-weight:inherit;}
+.form-group input#submit{background:none;border-width:0;font-size:25px;margin-top:5px;padding:15px 30px;width:auto;max-width:none;border-radius:5px;color:#fff;background-color:#07b71c;opacity:1;}
+.form-group input#submit:hover{opacity:0.7;}
+@media (max-width:800px){
+    .form-group input{max-width:80%;}
+}
+.form-group input:focus{outline:-webkit-focus-ring-color auto 0;}
+.form-group label{font-size:25px;}
+h3 a{text-decoration:none;background-color:#b71007;color:#fff;opacity:1;border-radius:5px;padding:7px;}
+table{width:100%;}
+td{padding:5px;}
+td a,
+td a:hover{text-decoration:none;color:#1b00a7;}
