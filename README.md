@@ -21,21 +21,9 @@ Use pip to install needed libraries
 pip install -r requirements.txt
 ```
 
-## Running the tests
-
-No tests yet
-
-### What are the tests checking
-
-No tests yet
-
-### What happens when a test fails
-
-No tests yet
-
 ## Authors
 
-* [**Cappillen lee**](https://github.com/calee14)
+* [**Cappillen Lee**](https://github.com/calee14)
 * [**Rafael Cenzano**](https://github.com/RafaelCenzano)
 
 ## License
