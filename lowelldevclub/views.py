@@ -292,6 +292,9 @@ def dashboard():
     workshops = Workshop.query.all()
     links = ShortLink.query.all()
 
+    workshops.sort(key=lambda workshop: workshop.created, reverse=True)
+    links.sort(key=lambda link: link.timesused)
+
     return render_template('dashboard.html', users=users, workshops=workshops, links=links)
 
 
