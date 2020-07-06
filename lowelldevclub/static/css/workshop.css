@@ -45,3 +45,20 @@
 .centering {
   text-align: center;
 }
+
+.current,
+.current:visited {
+  opacity: 0.6;
+  transition-duration: 0.5s;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #b71007;
+  color: #fff;
+  text-decoration: none;
+}
+
+.current:hover,
+.current:visited:hover {
+  opacity: 1;
+}
