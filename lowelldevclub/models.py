@@ -16,10 +16,10 @@ class ShortLink(db.Model):
 
 class Workshop(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
-    name = db.Column(db.String(50), unique=True, nullable=False)
+    name = db.Column(db.String(80), unique=True, nullable=False)
     repoUrl = db.Column(db.String(100), unique=False, nullable=True)
-    workshopMD = db.Column(db.String(100), unique=False, nullable=True)
-    text = db.Column(db.String(500), unique=False, nullable=False)
-    url = db.Column(db.String(50), unique=True, nullable=False)
+    workshopMD = db.Column(db.String(150), unique=False, nullable=True)
+    text = db.Column(db.String(1500), unique=False, nullable=False)
+    url = db.Column(db.String(80), unique=True, nullable=False)
     created = db.Column(db.DateTime, nullable=False, unique=False)
     timesviewed = db.Column(db.Integer, nullable=False, unique=False)
