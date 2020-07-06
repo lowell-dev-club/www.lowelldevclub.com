@@ -6,7 +6,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 from datetime import datetime
 from requests import get
 from bs4 import BeautifulSoup as bs
-from flask import render_template, request, make_response, redirect, send_file, url_for, flash, abort
+from flask import render_template, request, make_response, redirect, send_file, url_for, abort
 
 
 @login_manager.user_loader
@@ -78,7 +78,7 @@ def workshopRecent():
     workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
 
-    return redirect(url_for('workshop', url=workshops[0]))
+    return redirect(url_for('workshop', url=workshops[0].url))
 
 
 @app.route('/workshop', methods=['GET'])
@@ -97,7 +97,6 @@ def workshop(url):
 
     if checkWorkshop is None:
 
-        flash('Workshop not found')
         abort(404)
 
     checkWorkshop.timesviewed += 1
@@ -105,7 +104,7 @@ def workshop(url):
 
     if checkWorkshop.workshopMD is not None:
 
-        r = get('https://github.com/lowell-dev-club/flask-workshop-2.0/blob/master/README.md')
+        r = get(checkWorkshop.workshopMD)
         soup = bs(r.text, 'lxml')
         mdHtml = soup.findAll(attrs={'class':'markdown-body entry-content container-lg'})[0]
 
@@ -131,11 +130,15 @@ def createWorkshop():
         else:
             md = form.markdown.data
 
+        checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
+        
+        if checkWorkshop is not None:
+            return render_template('createWorkshop.html', form=form, edit=False)
+
         newWorkshop = Workshop(name=form.name.data, repoUrl=repo, workshopMD=md, text=form.text.data, url=form.url.data, timesviewed=0, created=datetime.now())
         db.session.add(newWorkshop)
         db.session.commit()
 
-        flash('Workshop created successfully!', 'success')
         return redirect(url_for('workshop', url=form.url.data))
 
     return render_template('createWorkshop.html', form=form, edit=False)
@@ -172,7 +175,6 @@ def editWorkshop(id):
         checkWorkshop.text = form.text.data
         db.session.commit()
 
-        flash('Workshop edited successfully!', 'success')
         return redirect(url_for('workshop', url=form.url.data))
 
     form.name.data = checkWorkshop.name
@@ -204,10 +206,8 @@ def deleteWorkshop(id):
                      current_user.email).encode('utf-8')).hexdigest()):
             db.session.delete(checkWorkshop)
             db.session.commit()
-            flash('Workshop deleted', 'info')
             return redirect(url_for('dashboard'))
 
-        flash('Incorrect Password', 'error')
         form.password.data = ''
 
     return render_template('passwordConfirm.html', form=form, title='Delete Workshop', message=f'Confirm you want to delete the workshop {checkWorkshop.name}')
@@ -225,7 +225,6 @@ def createLink():
         db.session.add(newShortLink)
         db.session.commit()
 
-        flash('Short link created successfully!', 'success')
         return redirect(url_for('shortInfo', num=newShortLink.id))
 
     return render_template('createLink.html', form=form, edit=False)
@@ -251,7 +250,6 @@ def editLink(id):
             shortLink.timesused = 0
         db.session.commit()
 
-        flash('Short link edited successfully!', 'success')
         return redirect(url_for('shortInfo', num=shortLink.id))
 
     form.longurl.data = shortLink.link
@@ -279,10 +277,8 @@ def deleteLink(id):
                      current_user.email).encode('utf-8')).hexdigest()):
             db.session.delete(shortLink)
             db.session.commit()
-            flash('Workshop deleted', 'info')
             return redirect(url_for('dashboard'))
 
-        flash('Incorrect Password', 'error')
         form.password.data = ''
 
     return render_template('passwordConfirm.html', form=form, title='Delete Shortlink', message=f'Confirm you want to delete the shortlink for {shortLink.link}')
@@ -302,18 +298,21 @@ def dashboard():
 def login():
 
     if current_user.is_authenticated:
-        flash('You are already logged in', 'warning')
         return redirect(url_for('home'))
 
     form = LoginForm()
+
     if form.validate_on_submit():
+
         email = form.email.data.lower()
         user = User.query.filter_by(email=email).first()
+
         if user is None:
-            flash(
-                f'Login Unsuccessful. User dosen\'t exsist',
-                'error')
+
+            return render_template('login.html', form=form)
+
         else:
+
             if bcrypt.check_password_hash(
                 user.password,
                 sha256(
@@ -323,14 +322,8 @@ def login():
                 login_user(user, remember=form.remember.data)
                 next_page = request.args.get('next')
 
-                flash(f'Logged in successfully.', 'success')
                 return redirect(next_page) if next_page else redirect(
                     url_for('home'))
-
-            else:
-                flash(
-                    'Login Unsuccessful. Please check email and password',
-                    'error')
 
     return render_template('login.html', form=form)
 
@@ -340,7 +333,6 @@ def logout():
 
     if current_user.is_authenticated:
         logout_user()
-        flash('Logout successful', 'success')
 
     return redirect(url_for('home'))
 
@@ -353,33 +345,23 @@ def userCreation():
 
     if form.validate_on_submit():
 
-        try:
-            email = form.email.data.lower()
+        email = form.email.data.lower()
 
-            duplicationCheck = User.query.filter_by(
-                email=email).first()
+        duplicationCheck = User.query.filter_by(
+            email=email).first()
 
-            if duplicationCheck is not None:
+        if duplicationCheck is not None:
 
-                flash(f'Duplicate email found', 'error')
+            return render_template('userCreate.html', form=form)
 
-                return render_template('userCreate.html', form=form)
+        tempPass = bcrypt.generate_password_hash(sha256((form.password.data + email).encode('utf-8')).hexdigest()).decode('utf-8')
 
-            tempPass = bcrypt.generate_password_hash(sha256((form.password.data + email).encode('utf-8')).hexdigest()).decode('utf-8')
+        newUser = User(
+            email=email,
+            password=tempPass)
 
-            newUser = User(
-                email=email,
-                password=tempPass)
-
-            db.session.add(newUser)
-            db.session.commit()
-
-            flash(
-                f'User created for {form.email.data}',
-                'success')
-
-        except BaseException as e:
-            flash(f'User couldn\'t be created. Error: {e}', 'error')
+        db.session.add(newUser)
+        db.session.commit()
 
         return redirect(url_for('home'))
     return render_template('userCreate.html', form=form)
@@ -398,7 +380,6 @@ def deleteUser(id):
 
     if current_user.id != checkUser.id:
 
-        flash('You can only delete your own account', 'error')
         return redirect(url_for('dashboard'))
 
     form = ConfirmPassword()
@@ -412,10 +393,8 @@ def deleteUser(id):
             logout_user()
             db.session.delete(checkUser)
             db.session.commit()
-            flash('Your user has been deleted')
             return redirect(url_for('home'))
 
-        flash('Incorrect Password', 'error')
         form.password.data = ''
 
     return render_template('passwordConfirm.html', form=form, title='Delete User', message='Confirm you want to delete your account')
