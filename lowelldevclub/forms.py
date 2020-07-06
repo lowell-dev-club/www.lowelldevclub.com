@@ -34,17 +34,17 @@ class ConfirmPassword(FlaskForm):
 
 
 class CreateWorkshop(FlaskForm):
-    name = StringField('Name', validators=[DataRequired(), Length(max=50)])
+    name = StringField('Name', validators=[DataRequired(), Length(max=80)])
     repo = StringField('Repo url', validators=[Length(max=100)])
-    markdown = StringField('Markdown url', validators=[Length(max=100)])
-    url = StringField('https://www.lowelldev.club/', validators=[DataRequired(), Length(max=50)])
+    markdown = StringField('Markdown url', validators=[Length(max=150)])
+    url = StringField('https://www.lowelldev.club/', validators=[DataRequired(), Length(max=80)])
     text = TextAreaField(
         'Description',
         widget=TextArea(),
         validators=[
             DataRequired(),
             Length(
-                max=500,
+                max=1500,
                 message='Description must be 500 characters or less')])
     submit = SubmitField('Create')
 
