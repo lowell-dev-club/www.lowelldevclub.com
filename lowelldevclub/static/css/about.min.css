@@ -53,21 +53,6 @@ img{margin:auto;max-width:10rem;max-height:10rem;border-radius:15px;}
   100%{opacity:1;height:auto;}
 }
 .fade-profiles{animation:fadeIn ease 5s forwards;-webkit-animation:fadeIn ease 5s forwards;-moz-animation:fadeIn ease 5s forwards;-o-animation:fadeIn ease 5s forwards;-ms-animation:fadeIn ease 5s forwards;}
-
-/*
-@media screen and (max-width:600px) {
-.fade-profiles {
-  animation: fadeIn-mobile ease 2.5s forwards;
-  -webkit-animation: fadeIn-mobile ease 2.5s forwards;
-  -moz-animation: fadeIn-mobile ease 2.5s forwards;
-  -o-animation: fadeIn-mobile ease 2.5s forwards;
-  -ms-animation: fadeIn-mobile ease2. 5s forwards;
-  animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
-}
-
-}
-*/
 @keyframes fadeIn{
   0%{height:0px;}
   25%{height:1100px;}
@@ -80,10 +65,3 @@ img{margin:auto;max-width:10rem;max-height:10rem;border-radius:15px;}
   50%{opacity:0%;height:1000px;}
   100%{opacity:1;height:1000px;}
 }
-@-webkit-keyframes fadeIn-mobile{
-  0%{height:0px;}
-  25%{height:3000px;}
-  50%{opacity:0%;height:3000px;}
-  100%{opacity:1;height:3000px;}
-}
-.back{text-decoration:none;color:#8e1a1a;font-size:20px;}
