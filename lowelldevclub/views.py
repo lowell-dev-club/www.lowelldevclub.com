@@ -99,8 +99,9 @@ def workshop(url):
 
         abort(404)
 
-    checkWorkshop.timesviewed += 1
-    db.session.commit()
+    if not current_user.is_authenticated:
+        checkWorkshop.timesviewed += 1
+        db.session.commit()
 
     if checkWorkshop.workshopMD is not None:
 
