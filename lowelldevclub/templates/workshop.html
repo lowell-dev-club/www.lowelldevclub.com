@@ -24,7 +24,7 @@
             <p>Workshop viewed {{ workshop.timesviewed }} time{% if workshop.timesviewed > 1 %}s{% endif %}</p>
             <p><a href="{{ url_for('editWorkshop', id=workshop.id) }}">Edit Workshop</a></p>
             {% endif %}
-            <p><a hef="{{ url_for('workshopList') }}">Back</a></p>
+            <p><a class="back" href="{{ url_for('workshopList') }}">Back</a></p>
             <p class="info">{{ workshop.text|safe }}</p>
             {% if mdHtml %}
             {{ mdHtml|safe }}
