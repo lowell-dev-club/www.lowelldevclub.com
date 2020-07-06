@@ -27,6 +27,7 @@ canvas {
 }
 
 h1,
+h2,
 h3 {
   text-align: center;
 }
@@ -38,11 +39,13 @@ h3 {
   padding: 25px;
 }
 
-@media (max-width:400px){
+@media (max-width:400px) {
   .container {
+    margin-top: 80px;
     width: 100%;
     max-width: 300px;
   }
+
 }
 
 .rounded {
@@ -64,7 +67,7 @@ h3 {
   text-align: center;
   font-family: arial;
   border-radius: 5px;
-  padding: none;
+  padding: 0;
   padding-top: 10px;
 }
 
@@ -116,12 +119,12 @@ h3 {
 
 .card button {
   border: none;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   outline: 0;
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #1400b9;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -142,7 +145,7 @@ img {
 }
 
 .col {
-  margin: auto;
+  margin: 20px auto;
   width: 100%;
   display: block;
 }
@@ -151,16 +154,26 @@ img {
   margin: auto;
 }
 
-@media (min-width:1300px){
+@media (min-width:1300px) {
   .row {
     width: 75%;
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 2rem 0px;
   }
+
   .col {
+    margin: 0 auto;
     width: 33.333%;
   }
+
+}
+
+@media (max-width:900px) {
+  .last {
+    margin-bottom: 90px;
+  }
+
 }
 
 .social-media {
@@ -213,21 +226,21 @@ img {
   -o-animation: fadeIn ease 5s forwards;
   -ms-animation: fadeIn ease 5s forwards;
 }
+
 /*
 @media screen and (max-width:600px) {
-  .fade-profiles {
-    animation: fadeIn-mobile ease 2.5s forwards;
-    -webkit-animation: fadeIn-mobile ease 2.5s forwards;
-    -moz-animation: fadeIn-mobile ease 2.5s forwards;
-    -o-animation: fadeIn-mobile ease 2.5s forwards;
-    -ms-animation: fadeIn-mobile ease2. 5s forwards;
-    animation-delay: 2.5s;
-    -webkit-animation-delay: 2.5s;
-  }
+.fade-profiles {
+  animation: fadeIn-mobile ease 2.5s forwards;
+  -webkit-animation: fadeIn-mobile ease 2.5s forwards;
+  -moz-animation: fadeIn-mobile ease 2.5s forwards;
+  -o-animation: fadeIn-mobile ease 2.5s forwards;
+  -ms-animation: fadeIn-mobile ease2. 5s forwards;
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+}
 
 }
 */
-
 @keyframes fadeIn {
   0% {
     height: 0px;
