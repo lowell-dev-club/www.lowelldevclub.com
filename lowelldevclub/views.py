@@ -69,7 +69,7 @@ def shortInfo(num):
     except:
         abort(404)
 
-    return render_template('shortinfo.html', shortLink=shortLink)
+    return render_template('shortInfo.html', shortLink=shortLink)
 
 
 @app.route('/workshop/recent', methods=['GET'])
