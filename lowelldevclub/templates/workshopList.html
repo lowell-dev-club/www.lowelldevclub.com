@@ -20,7 +20,7 @@
         {% include 'navbar.html' %}
         <div class="container rounded">
             <h1 class="partners-title"><u>Workshops</u></h1>
-            <h2><a href="{{ url_for('workshopRecent') }}">Current Workshop</a></h2>
+            <h2><a href="{{ url_for('workshopRecent') }}" class="current">Current Workshop</a></h2>
             {% for workshop in workshops %}
             <div class="workshop">
                 <a href="{{ url_for('workshop', url=workshop.url) }}">
