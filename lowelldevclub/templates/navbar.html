@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <a href="{{ url_for('home')}}" class="navbar-text" id="test"><img alt="Dev club white logo" src="{{ url_for('static', filename='img/logo-transparent.png') }}"></a>
+    <a href="{{ url_for('home')}}" class="navbar-text" id="test"><img src="https://rafael.sirv.com/Images/logo-transparent.png?h=36&png.optimize=true" width="64" height="36" srcset="https://rafael.sirv.com/Images/logo-transparent.png?h=36&png.optimize=true 1x, https://rafael.sirv.com/Images/logo-transparent.png?h=72&png.optimize=true 2x" alt="Dev Club Logo" /></a>
     <div class="navbar-right">
         {% if current_user.is_authenticated %}
         <a href="{{ url_for('dashboard') }}" class="navbar-text">Leader</a>
