@@ -7,6 +7,7 @@ from datetime import datetime
 from requests import get
 from bs4 import BeautifulSoup as bs
 from flask import render_template, request, make_response, redirect, send_file, url_for, abort
+from time import sleep as delay
 
 
 @login_manager.user_loader
@@ -17,6 +18,8 @@ def load_user(id):
         return None
 
 # User routes
+
+
 @app.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
@@ -49,11 +52,11 @@ def short(num):
 
     try:
         shortLink = ShortLink.query.get(int(num))
-        if shortLink is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        shortLink = ShortLink.query.get(int(num))
+    if shortLink is None:
         abort(404)
-
     shortLink.timesused += 1
     db.session.commit()
     return redirect(shortLink.link)
@@ -64,39 +67,47 @@ def shortInfo(num):
 
     try:
         shortLink = ShortLink.query.get(int(num))
-        if shortLink is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        shortLink = ShortLink.query.get(int(num))
+    if shortLink is None:
         abort(404)
-
     return render_template('shortInfo.html', shortLink=shortLink)
 
 
 @app.route('/workshop/recent', methods=['GET'])
 def workshopRecent():
 
-    workshops = Workshop.query.all()
+    try:
+        workshops = Workshop.query.all()
+    except BaseException:
+        delay(0.5)
+        workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
-
     return redirect(url_for('workshop', url=workshops[0].url))
 
 
 @app.route('/workshop', methods=['GET'])
 def workshopList():
 
-    workshops = Workshop.query.all()
+    try:
+        workshops = Workshop.query.all()
+    except BaseException:
+        workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
-
     return render_template('workshopList.html', workshops=workshops)
 
 
 @app.route('/workshop/<url>', methods=['GET'])
 def workshop(url):
 
-    checkWorkshop = Workshop.query.filter_by(url=url).first()
+    try:
+        checkWorkshop = Workshop.query.filter_by(url=url).first()
+    except BaseException:
+        delay(0.5)
+        checkWorkshop = Workshop.query.filter_by(url=url).first()
 
     if checkWorkshop is None:
-
         abort(404)
 
     if not current_user.is_authenticated:
@@ -107,14 +118,22 @@ def workshop(url):
 
         r = get(checkWorkshop.workshopMD)
         soup = bs(r.text, 'lxml')
-        mdHtml = soup.findAll(attrs={'class':'markdown-body entry-content container-lg'})[0]
+        mdHtml = soup.findAll(
+            attrs={
+                'class': 'markdown-body entry-content container-lg'})[0]
 
-        return render_template('workshop.html', workshop=checkWorkshop, mdHtml=mdHtml)
+        return render_template(
+            'workshop.html',
+            workshop=checkWorkshop,
+            mdHtml=mdHtml)
 
-    return render_template('workshop.html', workshop=checkWorkshop, mdHtml=None)
+    return render_template(
+        'workshop.html',
+        workshop=checkWorkshop,
+        mdHtml=None)
 
 
-@app.route('/create/workshop', methods=['GET','POST'])
+@app.route('/create/workshop', methods=['GET', 'POST'])
 @login_required
 def createWorkshop():
 
@@ -131,12 +150,24 @@ def createWorkshop():
         else:
             md = form.markdown.data
 
-        checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
-        
-        if checkWorkshop is not None:
-            return render_template('createWorkshop.html', form=form, edit=False)
+        try:
+            checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
+        except BaseException:
+            delay(0.5)
+            checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
 
-        newWorkshop = Workshop(name=form.name.data, repoUrl=repo, workshopMD=md, text=form.text.data, url=form.url.data, timesviewed=0, created=datetime.now())
+        if checkWorkshop is not None:
+            return render_template(
+                'createWorkshop.html', form=form, edit=False)
+
+        newWorkshop = Workshop(
+            name=form.name.data,
+            repoUrl=repo,
+            workshopMD=md,
+            text=form.text.data,
+            url=form.url.data,
+            timesviewed=0,
+            created=datetime.now())
         db.session.add(newWorkshop)
         db.session.commit()
 
@@ -145,15 +176,17 @@ def createWorkshop():
     return render_template('createWorkshop.html', form=form, edit=False)
 
 
-@app.route('/edit/workshop/<id>', methods=['GET','POST'])
+@app.route('/edit/workshop/<id>', methods=['GET', 'POST'])
 @login_required
 def editWorkshop(id):
 
     try:
         checkWorkshop = Workshop.query.get(int(id))
-        if checkWorkshop is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        checkWorkshop = Workshop.query.get(int(id))
+
+    if checkWorkshop is None:
         abort(404)
 
     form = CreateWorkshop()
@@ -183,18 +216,24 @@ def editWorkshop(id):
     form.markdown.data = checkWorkshop.workshopMD or ''
     form.url.data = checkWorkshop.url
     form.text.data = checkWorkshop.text
-    return render_template('createWorkshop.html', form=form, edit=True, workshop=checkWorkshop)
+    return render_template(
+        'createWorkshop.html',
+        form=form,
+        edit=True,
+        workshop=checkWorkshop)
 
 
-@app.route('/delete/workshop/<id>', methods=['GET','POST'])
+@app.route('/delete/workshop/<id>', methods=['GET', 'POST'])
 @login_required
 def deleteWorkshop(id):
 
     try:
         checkWorkshop = Workshop.query.get(int(id))
-        if checkWorkshop is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        checkWorkshop = Workshop.query.get(int(id))
+
+    if checkWorkshop is None:
         abort(404)
 
     form = ConfirmPassword()
@@ -211,10 +250,14 @@ def deleteWorkshop(id):
 
         form.password.data = ''
 
-    return render_template('passwordConfirm.html', form=form, title='Delete Workshop', message=f'Confirm you want to delete the workshop {checkWorkshop.name}')
+    return render_template(
+        'passwordConfirm.html',
+        form=form,
+        title='Delete Workshop',
+        message=f'Confirm you want to delete the workshop {checkWorkshop.name}')
 
 
-@app.route('/create/shortlink', methods=['GET','POST'])
+@app.route('/create/shortlink', methods=['GET', 'POST'])
 @login_required
 def createLink():
 
@@ -224,22 +267,28 @@ def createLink():
 
         newShortLink = ShortLink(link=form.longurl.data, timesused=0)
         db.session.add(newShortLink)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except:
+            delay(0.5)
+            db.session.commit()
 
         return redirect(url_for('shortInfo', num=newShortLink.id))
 
     return render_template('createLink.html', form=form, edit=False)
 
 
-@app.route('/edit/shortlink/<id>', methods=['GET','POST'])
+@app.route('/edit/shortlink/<id>', methods=['GET', 'POST'])
 @login_required
 def editLink(id):
 
     try:
         shortLink = ShortLink.query.get(int(id))
-        if shortLink is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        shortLink = ShortLink.query.get(int(id))
+
+    if shortLink is None:
         abort(404)
 
     form = CreateShortLink()
@@ -254,18 +303,24 @@ def editLink(id):
         return redirect(url_for('shortInfo', num=shortLink.id))
 
     form.longurl.data = shortLink.link
-    return render_template('createLink.html', form=form, edit=True, link=shortLink)
+    return render_template(
+        'createLink.html',
+        form=form,
+        edit=True,
+        link=shortLink)
 
 
-@app.route('/delete/shortlink/<id>', methods=['GET','POST'])
+@app.route('/delete/shortlink/<id>', methods=['GET', 'POST'])
 @login_required
 def deleteLink(id):
 
     try:
         shortLink = ShortLink.query.get(int(id))
-        if shortLink is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        shortLink = ShortLink.query.get(int(id))
+
+    if shortLink is None:
         abort(404)
 
     form = ConfirmPassword()
@@ -282,20 +337,32 @@ def deleteLink(id):
 
         form.password.data = ''
 
-    return render_template('passwordConfirm.html', form=form, title='Delete Shortlink', message=f'Confirm you want to delete the shortlink for {shortLink.link}')
+    return render_template(
+        'passwordConfirm.html',
+        form=form,
+        title='Delete Shortlink',
+        message=f'Confirm you want to delete the shortlink for {shortLink.link}')
 
 
 @app.route('/dashboard', methods=['GET'])
 @login_required
 def dashboard():
-    users = User.query.all()
+    try:
+        users = User.query.all()
+    except:
+        delay(0.5)
+        users = User.query.all()
     workshops = Workshop.query.all()
     links = ShortLink.query.all()
 
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
     links.sort(key=lambda link: link.timesused)
 
-    return render_template('dashboard.html', users=users, workshops=workshops, links=links)
+    return render_template(
+        'dashboard.html',
+        users=users,
+        workshops=workshops,
+        links=links)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -309,7 +376,11 @@ def login():
     if form.validate_on_submit():
 
         email = form.email.data.lower()
-        user = User.query.filter_by(email=email).first()
+        try:
+            user = User.query.filter_by(email=email).first()
+        except:
+            delay(0.5)
+            user = User.query.filter_by(email=email).first()
 
         if user is None:
 
@@ -351,14 +422,20 @@ def userCreation():
 
         email = form.email.data.lower()
 
-        duplicationCheck = User.query.filter_by(
-            email=email).first()
+        try:
+            duplicationCheck = User.query.filter_by(
+                email=email).first()
+        except:
+            delay(0.5)
+            duplicationCheck = User.query.filter_by(
+                email=email).first()
 
         if duplicationCheck is not None:
 
             return render_template('userCreate.html', form=form)
 
-        tempPass = bcrypt.generate_password_hash(sha256((form.password.data + email).encode('utf-8')).hexdigest()).decode('utf-8')
+        tempPass = bcrypt.generate_password_hash(sha256(
+            (form.password.data + email).encode('utf-8')).hexdigest()).decode('utf-8')
 
         newUser = User(
             email=email,
@@ -371,15 +448,17 @@ def userCreation():
     return render_template('userCreate.html', form=form)
 
 
-@app.route('/delete/user/<id>', methods=['GET','POST'])
+@app.route('/delete/user/<id>', methods=['GET', 'POST'])
 @login_required
 def deleteUser(id):
 
     try:
         checkUser = User.query.get(int(id))
-        if checkUser is None:
-            raise BaseException
-    except:
+    except BaseException:
+        delay(0.5)
+        checkUser = User.query.get(int(id))
+
+    if checkUser is None:
         abort(404)
 
     if current_user.id != checkUser.id:
@@ -401,15 +480,11 @@ def deleteUser(id):
 
         form.password.data = ''
 
-    return render_template('passwordConfirm.html', form=form, title='Delete User', message='Confirm you want to delete your account')
-
-short_links = [
-    'https://hackclub.com/workshops/personal_website#part-iii-the-css-file',
-    'https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules',
-    'https://github.com/lowell-dev-club/python-text-game/blob/master/workshop.md',
-    'https://github.com/lowell-dev-club/python-emailer/blob/master/workshop.md',
-    'https://github.com/lowell-dev-club/youtube-scraper/blob/master/README.md',
-    'https://github.com/lowell-dev-club/live-flask-workshop']
+    return render_template(
+        'passwordConfirm.html',
+        form=form,
+        title='Delete User',
+        message='Confirm you want to delete your account')
 
 
 @app.route('/latin/', methods=['GET', 'POST'])
