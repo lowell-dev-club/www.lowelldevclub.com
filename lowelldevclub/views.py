@@ -14,7 +14,7 @@ from time import sleep as delay
 def load_user(id):
     try:
         return User.query.get(int(id))
-    except BaseException:
+    except:
         return None
 
 # User routes
@@ -58,7 +58,7 @@ def short(num):
 
     try:
         shortLink = ShortLink.query.get(int(num))
-    except BaseException:
+    except:
         delay(0.5)
         shortLink = ShortLink.query.get(int(num))
     if shortLink is None:
@@ -73,7 +73,7 @@ def shortInfo(num):
 
     try:
         shortLink = ShortLink.query.get(int(num))
-    except BaseException:
+    except:
         delay(0.5)
         shortLink = ShortLink.query.get(int(num))
     if shortLink is None:
@@ -86,7 +86,7 @@ def workshopRecent():
 
     try:
         workshops = Workshop.query.all()
-    except BaseException:
+    except:
         delay(0.5)
         workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
@@ -98,7 +98,7 @@ def workshopList():
 
     try:
         workshops = Workshop.query.all()
-    except BaseException:
+    except:
         workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
     return render_template('workshopList.html', workshops=workshops)
@@ -109,7 +109,7 @@ def workshop(url):
 
     try:
         checkWorkshop = Workshop.query.filter_by(url=url).first()
-    except BaseException:
+    except:
         delay(0.5)
         checkWorkshop = Workshop.query.filter_by(url=url).first()
 
@@ -158,7 +158,7 @@ def createWorkshop():
 
         try:
             checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
-        except BaseException:
+        except:
             delay(0.5)
             checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
 
@@ -188,7 +188,7 @@ def editWorkshop(id):
 
     try:
         checkWorkshop = Workshop.query.get(int(id))
-    except BaseException:
+    except:
         delay(0.5)
         checkWorkshop = Workshop.query.get(int(id))
 
@@ -235,7 +235,7 @@ def deleteWorkshop(id):
 
     try:
         checkWorkshop = Workshop.query.get(int(id))
-    except BaseException:
+    except:
         delay(0.5)
         checkWorkshop = Workshop.query.get(int(id))
 
@@ -290,7 +290,7 @@ def editLink(id):
 
     try:
         shortLink = ShortLink.query.get(int(id))
-    except BaseException:
+    except:
         delay(0.5)
         shortLink = ShortLink.query.get(int(id))
 
@@ -322,7 +322,7 @@ def deleteLink(id):
 
     try:
         shortLink = ShortLink.query.get(int(id))
-    except BaseException:
+    except:
         delay(0.5)
         shortLink = ShortLink.query.get(int(id))
 
@@ -460,7 +460,7 @@ def deleteUser(id):
 
     try:
         checkUser = User.query.get(int(id))
-    except BaseException:
+    except:
         delay(0.5)
         checkUser = User.query.get(int(id))
 
