@@ -41,10 +41,16 @@ def donate():
 
 
 @app.route('/joinslack', methods=['GET'])
+@app.route('/slack', methods=['GET'])
 def joinslack():
     return redirect(
-        "https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY",
-        code=302)
+        'https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY')
+
+
+@app.route('/joindiscord', methods=['GET'])
+@app.route('/discord', methods=['GET'])
+def joindiscord():
+    return redirect('https://discord.gg/KQUBWzG')
 
 
 @app.route('/short<num>', methods=['GET'])
