@@ -219,7 +219,7 @@
 .markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5;}
 .markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1;}
 .markdown-body table tr:nth-child(2n){background-color:#f6f8fa;}
-.markdown-body img{max-width:100%;box-sizing:initial;background-color:#fff;}
+.markdown-body img{max-width:80% !important;box-sizing:initial;background-color:#fff;}
 .markdown-body img[align=right]{padding-left:20px;}
 .markdown-body img[align=left]{padding-right:20px;}
 .markdown-body code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px;}
