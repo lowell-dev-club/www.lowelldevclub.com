@@ -59,7 +59,7 @@ def short(num):
     try:
         shortLink = ShortLink.query.get(int(num))
     except:
-        delay(0.5)
+        db.session.rollback()
         shortLink = ShortLink.query.get(int(num))
     if shortLink is None:
         abort(404)
@@ -74,7 +74,7 @@ def shortInfo(num):
     try:
         shortLink = ShortLink.query.get(int(num))
     except:
-        delay(0.5)
+        db.session.rollback()
         shortLink = ShortLink.query.get(int(num))
     if shortLink is None:
         abort(404)
@@ -87,7 +87,7 @@ def workshopRecent():
     try:
         workshops = Workshop.query.all()
     except:
-        delay(0.5)
+        db.session.rollback()
         workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
     return redirect(url_for('workshop', url=workshops[0].url))
@@ -110,7 +110,7 @@ def workshop(url):
     try:
         checkWorkshop = Workshop.query.filter_by(url=url).first()
     except:
-        delay(0.5)
+        db.session.rollback()
         checkWorkshop = Workshop.query.filter_by(url=url).first()
 
     if checkWorkshop is None:
@@ -159,7 +159,7 @@ def createWorkshop():
         try:
             checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
         except:
-            delay(0.5)
+            db.session.rollback()
             checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
 
         if checkWorkshop is not None:
@@ -189,7 +189,7 @@ def editWorkshop(id):
     try:
         checkWorkshop = Workshop.query.get(int(id))
     except:
-        delay(0.5)
+        db.session.rollback()
         checkWorkshop = Workshop.query.get(int(id))
 
     if checkWorkshop is None:
@@ -236,7 +236,7 @@ def deleteWorkshop(id):
     try:
         checkWorkshop = Workshop.query.get(int(id))
     except:
-        delay(0.5)
+        db.session.rollback()
         checkWorkshop = Workshop.query.get(int(id))
 
     if checkWorkshop is None:
@@ -276,7 +276,7 @@ def createLink():
         try:
             db.session.commit()
         except:
-            delay(0.5)
+            db.session.rollback()
             db.session.commit()
 
         return redirect(url_for('shortInfo', num=newShortLink.id))
@@ -291,7 +291,7 @@ def editLink(id):
     try:
         shortLink = ShortLink.query.get(int(id))
     except:
-        delay(0.5)
+        db.session.rollback()
         shortLink = ShortLink.query.get(int(id))
 
     if shortLink is None:
@@ -323,7 +323,7 @@ def deleteLink(id):
     try:
         shortLink = ShortLink.query.get(int(id))
     except:
-        delay(0.5)
+        db.session.rollback()
         shortLink = ShortLink.query.get(int(id))
 
     if shortLink is None:
@@ -356,7 +356,7 @@ def dashboard():
     try:
         users = User.query.all()
     except:
-        delay(0.5)
+        db.session.rollback()
         users = User.query.all()
     workshops = Workshop.query.all()
     links = ShortLink.query.all()
@@ -385,7 +385,7 @@ def login():
         try:
             user = User.query.filter_by(email=email).first()
         except:
-            delay(0.5)
+            db.session.rollback()
             user = User.query.filter_by(email=email).first()
 
         if user is None:
@@ -432,7 +432,7 @@ def userCreation():
             duplicationCheck = User.query.filter_by(
                 email=email).first()
         except:
-            delay(0.5)
+            db.session.rollback()
             duplicationCheck = User.query.filter_by(
                 email=email).first()
 
@@ -461,7 +461,7 @@ def deleteUser(id):
     try:
         checkUser = User.query.get(int(id))
     except:
-        delay(0.5)
+        db.session.rollback()
         checkUser = User.query.get(int(id))
 
     if checkUser is None:
