@@ -30,9 +30,36 @@ canvas{display:block;vertical-align:bottom;}
 .current:visited{opacity:0.6;transition-duration:0.5s;border-radius:15px;padding:10px;font-size:15px;background-color:#b71007;color:#fff;text-decoration:none;}
 .current:hover,
 .current:visited:hover{opacity:1;}
-.workshop h3{font-weight: bold;text-align:left;font-size:25px;margin:0;color:#fff;}
-.workshop p{font-size:15px;color:#ddd;margin:0;margin-top:5px;}
-.workshop{padding:15px;background-color:#8a8a8a;border-radius:15px;margin:15px auto;width:80%;max-width:500px;}
+.workshop h3 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+    margin: 0;
+    color: #636060;
+}
+.workshop p {
+    font-size: 15px;
+    color: #969696;
+    margin: 0;
+    margin-top: 5px;
+}
+.workshop {
+    padding: 15px;
+    background-color: #fff;
+    margin: 10px auto;
+    width: 90%;
+    transition-duration: 0.5s;
+    max-width: 700px;
+}
+@media (max-width:800px;){
+    .workshop:hover {
+        background-color: #fff;
+        box-shadow: 0 0 10px 1px #9a9a9a;
+    }
+    .workshop {
+        background-color: #e5f3ff;
+    }
+}
 .workshop a{text-decoration:none;}
 .back{text-decoration:none;color:#8e1a1a;font-size:20px;}
 .partners-title{text-align:center;}
