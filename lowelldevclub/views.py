@@ -99,6 +99,7 @@ def workshopList():
     try:
         workshops = Workshop.query.all()
     except:
+        db.session.rollback()
         workshops = Workshop.query.all()
     workshops.sort(key=lambda workshop: workshop.created, reverse=True)
     return render_template('workshopList.html', workshops=workshops)
