@@ -8,11 +8,12 @@ body{margin:0;font:normal 85% Arial,Helvetica,sans-serif;}
 canvas{display:block;vertical-align:bottom;}
 .container{margin:50px auto 10px auto;width:75%;background:#E5F3FF;padding:25px;}
 @media (max-width:400px){
-  .container{margin-top:80px;width:100%;max-width:300px;}
+    .container{margin-top:80px;width:100%;max-width:300px;}
 }
 @media (max-height:1000px){
-  .container{margin-bottom:100px;}
+    .container{margin-bottom:100px;}
 }
+
 /* ---- particles.js container ---- */
 #particles-js{position:fixed;width:100%;height:100%;background-color:#B60606;background-image:url("");background-repeat:no-repeat;background-size:cover;background-position:50% 50%;}
 .body-particles{position:absolute;top:0;left:0;width:100%;z-index:100;}
@@ -30,35 +31,12 @@ canvas{display:block;vertical-align:bottom;}
 .current:visited{opacity:0.6;transition-duration:0.5s;border-radius:15px;padding:10px;font-size:15px;background-color:#b71007;color:#fff;text-decoration:none;}
 .current:hover,
 .current:visited:hover{opacity:1;}
-.workshop h3 {
-    font-weight: bold;
-    text-align: left;
-    font-size: 25px;
-    margin: 0;
-    color: #636060;
-}
-.workshop p {
-    font-size: 15px;
-    color: #969696;
-    margin: 0;
-    margin-top: 5px;
-}
-.workshop {
-    padding: 15px;
-    background-color: #fff;
-    margin: 10px auto;
-    width: 90%;
-    transition-duration: 0.5s;
-    max-width: 700px;
-}
-@media (min-width:800px;){
-    .workshop:hover {
-        background-color: #fff;
-        box-shadow: 0 0 10px 1px #9a9a9a;
-    }
-    .workshop {
-        background-color: #e5f3ff;
-    }
+.workshop h3{font-weight:bold;text-align:left;font-size:25px;margin:0;color:#636060;}
+.workshop p{font-size:15px;color:#969696;margin:0;margin-top:5px;}
+.workshop{padding:15px;background-color:#fff;margin:10px auto;width:90%;transition-duration:0.5s;max-width:700px;}
+@media (min-width:800px){
+    .workshop:hover{background-color:#fff;box-shadow:0 0 10px 1px #9a9a9a;}
+    .workshop{background-color:#e5f3ff;}
 }
 .workshop a{text-decoration:none;}
 .back{text-decoration:none;color:#8e1a1a;font-size:20px;}
