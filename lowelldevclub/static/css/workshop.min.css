@@ -45,7 +45,7 @@ canvas{display:block;vertical-align:bottom;}
 }
 .workshop {
     padding: 15px;
-    background-color: #fff;
+    background-color: #e5f3ff;
     margin: 10px auto;
     width: 90%;
     transition-duration: 0.5s;
@@ -57,7 +57,7 @@ canvas{display:block;vertical-align:bottom;}
         box-shadow: 0 0 10px 1px #9a9a9a;
     }
     .workshop {
-        background-color: #e5f3ff;
+        background-color: #fff;
     }
 }
 .workshop a{text-decoration:none;}
