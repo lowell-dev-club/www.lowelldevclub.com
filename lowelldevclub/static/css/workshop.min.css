@@ -45,19 +45,19 @@ canvas{display:block;vertical-align:bottom;}
 }
 .workshop {
     padding: 15px;
-    background-color: #e5f3ff;
+    background-color: #fff;
     margin: 10px auto;
     width: 90%;
     transition-duration: 0.5s;
     max-width: 700px;
 }
-@media (max-width:800px;){
+@media (min-width:800px;){
     .workshop:hover {
         background-color: #fff;
         box-shadow: 0 0 10px 1px #9a9a9a;
     }
     .workshop {
-        background-color: #fff;
+        background-color: #e5f3ff;
     }
 }
 .workshop a{text-decoration:none;}
