@@ -93,13 +93,6 @@ def workshopRecent():
     return redirect(url_for('workshop', url=workshops[0].url))
 
 
-@app.route('/workshops', methods=['GET'])
-@app.route('/workshop/', methods=['GET'])
-@app.route('/workshops/', methods=['GET'])
-def rerouteToWorkshop():
-    return redirect(url_for('workshopList'))
-
-
 @app.route('/workshop', methods=['GET'])
 def workshopList():
 
