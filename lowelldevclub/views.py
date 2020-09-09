@@ -53,6 +53,11 @@ def joindiscord():
     return redirect('https://discord.gg/KQUBWzG')
 
 
+@app.route('/signup')
+def signup():
+    return render_template('typeform.html')
+
+
 @app.route('/short<num>', methods=['GET'])
 def short(num):
 
