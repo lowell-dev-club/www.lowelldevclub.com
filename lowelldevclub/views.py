@@ -44,7 +44,7 @@ def donate():
 @app.route('/slack', methods=['GET'])
 def joinslack():
     return redirect(
-        'https://join.slack.com/t/lowelldevclub/shared_invite/enQtNTU4NTA5NTUxMjgxLWZmNjA1MThhMzBkODZjMmUwYzU0OGMxNjE3NTUxNzU5MTQwNjcxYWY4ZmRjN2M0MDU5OWMyNTJmZDEyM2M2MTY')
+        'https://join.slack.com/t/lowelldevclub/shared_invite/zt-74kq5zu9-RuzCoIUlwIAw4fLU8wq5LQ')
 
 
 @app.route('/joindiscord', methods=['GET'])
