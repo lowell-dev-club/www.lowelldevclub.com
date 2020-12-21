@@ -10,12 +10,22 @@ from flask import render_template, request, make_response, redirect, send_file, 
 from time import sleep as delay
 
 
+# Load user or return None if not found
 @login_manager.user_loader
 def load_user(id):
+
+    # Query for User
     try:
-        return User.query.get(int(id))
-    except:
+        user = User.query.get(int(id))
+    except BaseException:
+        db.session.rollback()
+        user = User.query.get(int(id))
+
+    # If user not found return None else return User object
+    if user is None:
         return None
+
+    return user
 
 # User routes
 
