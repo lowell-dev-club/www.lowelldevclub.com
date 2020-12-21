@@ -5,9 +5,8 @@ Revises:
 Create Date: 2020-07-04 17:07:21.470669
 
 """
-from alembic import op
 import sqlalchemy as sa
-
+from alembic import op
 
 # revision identifiers, used by Alembic.
 revision = '480bf9d0a3eb'
@@ -45,4 +44,4 @@ def downgrade():
     op.drop_constraint(None, 'user', type_='unique')
     op.drop_constraint(None, 'short_link', type_='unique')
     # ### end Alembic commands ###
-    #pass
+    # pass
