@@ -6,7 +6,15 @@ from flask_login import login_user, current_user, logout_user, login_required
 from datetime import datetime
 from requests import get
 from bs4 import BeautifulSoup as bs
-from flask import render_template, request, make_response, redirect, send_file, url_for, abort
+from flask import (
+    render_template,
+    request,
+    make_response,
+    redirect,
+    send_file,
+    url_for,
+    abort,
+)
 from time import sleep as delay
 
 
@@ -26,6 +34,7 @@ def load_user(id):
         return None
 
     return user
+
 
 # User routes
 
@@ -54,7 +63,8 @@ def donate():
 @app.route('/slack', methods=['GET'])
 def joinslack():
     return redirect(
-        'https://join.slack.com/t/lowelldevclub/shared_invite/zt-74kq5zu9-RuzCoIUlwIAw4fLU8wq5LQ')
+        'https://join.slack.com/t/lowelldevclub/shared_invite/zt-74kq5zu9-RuzCoIUlwIAw4fLU8wq5LQ'
+    )
 
 
 @app.route('/joindiscord', methods=['GET'])
@@ -141,18 +151,12 @@ def workshop(url):
         r = get(checkWorkshop.workshopMD)
         soup = bs(r.text, 'lxml')
         mdHtml = soup.findAll(
-            attrs={
-                'class': 'markdown-body entry-content container-lg'})[0]
+            attrs={'class': 'markdown-body entry-content container-lg'}
+        )[0]
 
-        return render_template(
-            'workshop.html',
-            workshop=checkWorkshop,
-            mdHtml=mdHtml)
+        return render_template('workshop.html', workshop=checkWorkshop, mdHtml=mdHtml)
 
-    return render_template(
-        'workshop.html',
-        workshop=checkWorkshop,
-        mdHtml=None)
+    return render_template('workshop.html', workshop=checkWorkshop, mdHtml=None)
 
 
 @app.route('/create/workshop', methods=['GET', 'POST'])
@@ -179,8 +183,7 @@ def createWorkshop():
             checkWorkshop = Workshop.query.filter_by(url=form.url.data).first()
 
         if checkWorkshop is not None:
-            return render_template(
-                'createWorkshop.html', form=form, edit=False)
+            return render_template('createWorkshop.html', form=form, edit=False)
 
         newWorkshop = Workshop(
             name=form.name.data,
@@ -189,7 +192,8 @@ def createWorkshop():
             text=form.text.data,
             url=form.url.data,
             timesviewed=0,
-            created=datetime.now())
+            created=datetime.now(),
+        )
         db.session.add(newWorkshop)
         db.session.commit()
 
@@ -239,10 +243,8 @@ def editWorkshop(id):
     form.url.data = checkWorkshop.url
     form.text.data = checkWorkshop.text
     return render_template(
-        'createWorkshop.html',
-        form=form,
-        edit=True,
-        workshop=checkWorkshop)
+        'createWorkshop.html', form=form, edit=True, workshop=checkWorkshop
+    )
 
 
 @app.route('/delete/workshop/<id>', methods=['GET', 'POST'])
@@ -262,10 +264,11 @@ def deleteWorkshop(id):
 
     if form.validate_on_submit():
         if bcrypt.check_password_hash(
-                current_user.password,
-                sha256(
-                    (form.password.data +
-                     current_user.email).encode('utf-8')).hexdigest()):
+            current_user.password,
+            sha256(
+                (form.password.data + current_user.email).encode('utf-8')
+            ).hexdigest(),
+        ):
             db.session.delete(checkWorkshop)
             db.session.commit()
             return redirect(url_for('dashboard'))
@@ -276,7 +279,8 @@ def deleteWorkshop(id):
         'passwordConfirm.html',
         form=form,
         title='Delete Workshop',
-        message=f'Confirm you want to delete the workshop {checkWorkshop.name}')
+        message=f'Confirm you want to delete the workshop {checkWorkshop.name}',
+    )
 
 
 @app.route('/create/shortlink', methods=['GET', 'POST'])
@@ -325,11 +329,7 @@ def editLink(id):
         return redirect(url_for('shortInfo', num=shortLink.id))
 
     form.longurl.data = shortLink.link
-    return render_template(
-        'createLink.html',
-        form=form,
-        edit=True,
-        link=shortLink)
+    return render_template('createLink.html', form=form, edit=True, link=shortLink)
 
 
 @app.route('/delete/shortlink/<id>', methods=['GET', 'POST'])
@@ -349,10 +349,11 @@ def deleteLink(id):
 
     if form.validate_on_submit():
         if bcrypt.check_password_hash(
-                current_user.password,
-                sha256(
-                    (form.password.data +
-                     current_user.email).encode('utf-8')).hexdigest()):
+            current_user.password,
+            sha256(
+                (form.password.data + current_user.email).encode('utf-8')
+            ).hexdigest(),
+        ):
             db.session.delete(shortLink)
             db.session.commit()
             return redirect(url_for('dashboard'))
@@ -363,7 +364,8 @@ def deleteLink(id):
         'passwordConfirm.html',
         form=form,
         title='Delete Shortlink',
-        message=f'Confirm you want to delete the shortlink for {shortLink.link}')
+        message=f'Confirm you want to delete the shortlink for {shortLink.link}',
+    )
 
 
 @app.route('/dashboard', methods=['GET'])
@@ -381,10 +383,8 @@ def dashboard():
     links.sort(key=lambda link: link.timesused)
 
     return render_template(
-        'dashboard.html',
-        users=users,
-        workshops=workshops,
-        links=links)
+        'dashboard.html', users=users, workshops=workshops, links=links
+    )
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -412,15 +412,13 @@ def login():
 
             if bcrypt.check_password_hash(
                 user.password,
-                sha256(
-                    (form.password.data +
-                     email).encode('utf-8')).hexdigest()):
+                sha256((form.password.data + email).encode('utf-8')).hexdigest(),
+            ):
 
                 login_user(user, remember=form.remember.data)
                 next_page = request.args.get('next')
 
-                return redirect(next_page) if next_page else redirect(
-                    url_for('home'))
+                return redirect(next_page) if next_page else redirect(url_for('home'))
 
     return render_template('login.html', form=form)
 
@@ -445,23 +443,20 @@ def userCreation():
         email = form.email.data.lower()
 
         try:
-            duplicationCheck = User.query.filter_by(
-                email=email).first()
+            duplicationCheck = User.query.filter_by(email=email).first()
         except:
             db.session.rollback()
-            duplicationCheck = User.query.filter_by(
-                email=email).first()
+            duplicationCheck = User.query.filter_by(email=email).first()
 
         if duplicationCheck is not None:
 
             return render_template('userCreate.html', form=form)
 
-        tempPass = bcrypt.generate_password_hash(sha256(
-            (form.password.data + email).encode('utf-8')).hexdigest()).decode('utf-8')
+        tempPass = bcrypt.generate_password_hash(
+            sha256((form.password.data + email).encode('utf-8')).hexdigest()
+        ).decode('utf-8')
 
-        newUser = User(
-            email=email,
-            password=tempPass)
+        newUser = User(email=email, password=tempPass)
 
         db.session.add(newUser)
         db.session.commit()
@@ -491,10 +486,11 @@ def deleteUser(id):
 
     if form.validate_on_submit():
         if bcrypt.check_password_hash(
-                current_user.password,
-                sha256(
-                    (form.password.data +
-                     current_user.email).encode('utf-8')).hexdigest()):
+            current_user.password,
+            sha256(
+                (form.password.data + current_user.email).encode('utf-8')
+            ).hexdigest(),
+        ):
             logout_user()
             db.session.delete(checkUser)
             db.session.commit()
@@ -506,15 +502,15 @@ def deleteUser(id):
         'passwordConfirm.html',
         form=form,
         title='Delete User',
-        message='Confirm you want to delete your account')
+        message='Confirm you want to delete your account',
+    )
 
 
 @app.route('/latin/', methods=['GET', 'POST'])
 def latin():
     form = LatinForm()
     if request.method == 'POST':
-        form.link = 'https://en.m.wiktionary.org/wiki/' + \
-            str(form.word.data) + '#Latin'
+        form.link = 'https://en.m.wiktionary.org/wiki/' + str(form.word.data) + '#Latin'
     return render_template('latin.html', form=form)
 
 

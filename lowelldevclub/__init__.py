@@ -4,11 +4,11 @@ Imports
 
 # Flask imports
 from flask import Flask
-
+from flask_bcrypt import Bcrypt
 # Import Flask modules
 from flask_login import LoginManager
-from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
+
 from config import Config
 
 # Create Flask app
@@ -26,6 +26,7 @@ login_manager.login_message_category = 'warning'
 
 # importing all the models and initializing them
 from lowelldevclub.models import *
+
 db.create_all()
 
 # Import all views

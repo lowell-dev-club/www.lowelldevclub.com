@@ -1,5 +1,6 @@
-from lowelldevclub import db, login_manager, app
 from flask_login import UserMixin
+
+from lowelldevclub import app, db, login_manager
 
 
 class User(db.Model, UserMixin):
