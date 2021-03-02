@@ -15,7 +15,6 @@ from flask import (
     url_for,
     abort,
 )
-from time import sleep as delay
 
 
 # Load user or return None if not found

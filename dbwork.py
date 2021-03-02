@@ -1,8 +1,7 @@
 import sys
-from datetime import datetime
 from hashlib import sha256
 
-from lowelldevclub import app, bcrypt, db
+from lowelldevclub import bcrypt, db
 from lowelldevclub.models import *
 
 if sys.argv[1] == 'test':
