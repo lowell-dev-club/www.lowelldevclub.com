@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://www.lowelldev.club/sitemap.xml
+Sitemap: https://www.lowelldevclub.com/sitemap.xml
