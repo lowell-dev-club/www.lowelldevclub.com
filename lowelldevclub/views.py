@@ -506,14 +506,6 @@ def deleteUser(id):
     )
 
 
-@app.route('/latin/', methods=['GET', 'POST'])
-def latin():
-    form = LatinForm()
-    if request.method == 'POST':
-        form.link = 'https://en.m.wiktionary.org/wiki/' + str(form.word.data) + '#Latin'
-    return render_template('latin.html', form=form)
-
-
 # SEO
 @app.route('/robots.txt', methods=['GET'])
 def robots():
