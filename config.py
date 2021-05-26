@@ -6,8 +6,8 @@ Config class
 
 
 class Config(object):
-
-    SECRET_KEY = os.environ.get('devclubkey')
+    # Get the secret key or use the key dev if the devclubkey is not set
+    SECRET_KEY = os.environ.get('devclubkey', 'dev')
 
     TESTING = False
     DEBUG = False

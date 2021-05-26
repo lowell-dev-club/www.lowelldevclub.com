@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web';
+  font-size: 17px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font: normal 85% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b60606;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- center text ---- */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+}
+.center p {
+  text-align: center;
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 580px) and (max-height: 650px) {
+  h1 {
+    padding: 40px 0;
+    font-size: 0.7em;
+    max-width: 90%;
+  }
+  .center {
+    width: 100%;
+  }
+  .center p {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+
+/* ---- css to fade in the home page ---- */
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---- css to float the title ----*/
+.float-up {
+  position: relative; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: float-up;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: both; /* Standard syntax */
+  animation-name: float-up;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: both; /* IE 9 */
+  -ms-transform-name: float-up;
+  -ms-transform-duration: 5s;
+  -ms-transform-delay: 1s;
+  -ms-transform-fill-mode: both;
+  text-align: center;
+  margin: auto;
+}
+.float-up-subtitle {
+  position: relative; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: float-up;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: both; /* Standard syntax */
+  animation-name: float-up;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: both; /* IE 9 */
+  -ms-transform-name: float-up;
+  -ms-transform-duration: 5s;
+  -ms-transform-delay: 2s;
+  -ms-transform-fill-mode: both;
+}
+.workshop {
+  text-decoration: none;
+  color: white;
+}
+.workshop:hover {
+  color: #ddd;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes float-up {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+}
+
+/* Standard */
+@keyframes float-up {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  100% {
+    top: -50px;
+    opacity: 1;
+  }
+}

@@ -41,7 +41,7 @@ class CreateWorkshop(FlaskForm):
     repo = StringField('Repo url', validators=[Length(max=100)])
     markdown = StringField('Markdown url', validators=[Length(max=150)])
     url = StringField(
-        'https://www.lowelldev.club/', validators=[DataRequired(), Length(max=80)]
+        'Url Route', validators=[DataRequired(), Length(max=80)]
     )
     text = TextAreaField(
         'Description',
