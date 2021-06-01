@@ -166,7 +166,7 @@ def createWorkshop():
             repo = form.repo.data
 
         if form.markdown.data == '':
-            md = None
+            abort(400)
         else:
             md = form.markdown.data
 
