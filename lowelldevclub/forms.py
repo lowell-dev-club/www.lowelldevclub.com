@@ -39,7 +39,7 @@ class ConfirmPassword(FlaskForm):
 class CreateWorkshop(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(max=80)])
     repo = StringField('Repo url', validators=[Length(max=100)])
-    markdown = StringField('Markdown url', validators=[Length(max=150)])
+    markdown = StringField('Markdown url', validators=[DataRequired(), Length(max=150)])
     url = StringField(
         'Url Route', validators=[DataRequired(), Length(max=80)]
     )

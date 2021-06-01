@@ -33,7 +33,7 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.name() }}
+                    {{ form.name(placeholder="Intro to Flask") }}
                 {% endif %}
                 </div>
                 <div class="form-group">
@@ -61,7 +61,7 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.markdown() }}
+                    {{ form.markdown(placeholder="link-to-markdown.md") }}
                 {% endif %}
                 </div>
                 <div class="form-group">
@@ -75,7 +75,7 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                    {{ form.url() }}
+                    {{ form.url(placeholder="route (don't put /route)") }}
                 {% endif %}
                 </div>
                 <div class="form-group">

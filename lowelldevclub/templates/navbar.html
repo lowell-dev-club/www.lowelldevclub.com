@@ -4,7 +4,7 @@
         {% if current_user.is_authenticated %}
         <a href="{{ url_for('dashboard') }}" class="navbar-text">Leader</a>
         {% endif %}
-        <a href="{{ url_for('workshopList') }}" class="navbar-text">Workshop</a>
+        <a href="{{ url_for('workshopList') }}" class="navbar-text">Workshops</a>
         <a href="{{ url_for('about') }}" class="navbar-text">About</a>
         <a href="{{ url_for('partners') }}" class="navbar-text">Partners</a>
         <a href="{{ url_for('donate') }}" class="navbar-text">Donate!</a>
