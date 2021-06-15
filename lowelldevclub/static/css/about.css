@@ -65,9 +65,9 @@ h3 {
 }
 .about_paragraph {
   opacity: 0;
-  height: 0px;
+  line-height: 1.5;
+  font-size: 1.1rem;
 }
-
 /* ---- particles.js container ---- */
 #particles-js {
   position: fixed;
@@ -168,21 +168,17 @@ img {
 @keyframes fadeInParagraph {
   0% {
     opacity: 0;
-    height: 0px;
   }
   100% {
     opacity: 1;
-    height: auto;
   }
 }
 @-webkit-keyframes fadeInParagraph {
   0% {
     opacity: 0;
-    height: 0px;
   }
   100% {
     opacity: 1;
-    height: auto;
   }
 }
 .fade-profiles {
