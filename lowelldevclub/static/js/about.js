@@ -44,7 +44,7 @@ $(function(){
 	This is the type script for the club description in the about page
 */
 var i = 0;
-var txt = "Meet the leaders:";
+var txt = "Meet the Officers:";
 var speed = 40;
 var delayInMilliseconds = 1200
 setTimeout(function() {

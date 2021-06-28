@@ -19,7 +19,6 @@ body {
 }
 canvas {
   display: block;
-  vertical-align: bottom;
 }
 h1,
 h2,
@@ -47,12 +46,17 @@ h3 {
 .profile-card-container {
   opacity: 0;
   height: 0px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5px;
 }
 .card {
+  margin: 5px;
+  flex: 0 1 300px;
   background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+  height: 450px;
   text-align: center;
   font-family: arial;
   border-radius: 5px;
@@ -65,9 +69,9 @@ h3 {
 }
 .about_paragraph {
   opacity: 0;
-  height: 0px;
+  line-height: 1.5;
+  font-size: 1.1rem;
 }
-
 /* ---- particles.js container ---- */
 #particles-js {
   position: fixed;
@@ -168,21 +172,17 @@ img {
 @keyframes fadeInParagraph {
   0% {
     opacity: 0;
-    height: 0px;
   }
   100% {
     opacity: 1;
-    height: auto;
   }
 }
 @-webkit-keyframes fadeInParagraph {
   0% {
     opacity: 0;
-    height: 0px;
   }
   100% {
     opacity: 1;
-    height: auto;
   }
 }
 .fade-profiles {
@@ -193,34 +193,18 @@ img {
   -ms-animation: fadeIn ease 5s forwards;
 }
 @keyframes fadeIn {
-  0% {
-    height: 0px;
-  }
-  25% {
-    height: 1100px;
-  }
   50% {
     opacity: 0%;
-    height: 1100px;
   }
   100% {
     opacity: 1;
-    height: 1100px;
   }
 }
 @-webkit-keyframes fadeIn {
-  0% {
-    height: 0px;
-  }
-  25% {
-    height: 1000px;
-  }
   50% {
     opacity: 0%;
-    height: 1000px;
   }
   100% {
     opacity: 1;
-    height: 1000px;
   }
 }

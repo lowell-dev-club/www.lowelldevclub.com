@@ -21,11 +21,18 @@ Use pip to install needed libraries
 pip install -r requirements.txt
 ```
 
+## Run Website Locally
+- export the database url environment variable
+```bash
+export DATABASE_URL=database_url_on_heroku
+```
+- uncomment out the code in run.py
+- Run ```python run.py``` in your terminal
 ## Authors
 
 * [**Cappillen Lee**](https://github.com/calee14)
 * [**Rafael Cenzano**](https://github.com/RafaelCenzano)
-
+* [**Josh Chen**](https://github.com/joshchen984)
 ## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
