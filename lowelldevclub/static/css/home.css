@@ -129,11 +129,11 @@ canvas {
   -ms-transform-delay: 2s;
   -ms-transform-fill-mode: both;
 }
-.workshop {
-  text-decoration: none;
+.join-discord {
   color: white;
+  font-size: 1.5rem;
 }
-.workshop:hover {
+.join-discord:hover {
   color: #ddd;
 }
 
